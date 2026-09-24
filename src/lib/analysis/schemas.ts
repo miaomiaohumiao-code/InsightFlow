@@ -1,24 +1,8 @@
-import Ajv from "ajv";
-import extraction from "../../../docs/ai-analysis/batch-extraction.schema.json";
 import draft from "../../../docs/ai-analysis/analysis-draft.schema.json";
-import assignment from "../../../docs/ai-analysis/evidence-assignment.schema.json";
-import result from "../../../docs/ai-analysis/analysis-result.schema.json";
+import { schemas } from "./schema-definitions";
+import * as validators from "./generated/validators.cjs";
+export { schemas };
 
-export const schemas = {
-  extract: extraction,
-  aggregate: draft,
-  assign: {
-    type: "object",
-    properties: { results: { type: "array", items: assignment } },
-    required: ["results"],
-    additionalProperties: false,
-  },
-  result,
-};
-const ajv = new Ajv({ strict: false, allErrors: true });
-const validators = Object.fromEntries(
-  Object.entries(schemas).map(([key, schema]) => [key, ajv.compile(schema)]),
-);
 // Remove only unknown priority metadata. Required values and evidence are never repaired here.
 export function sanitizePriorityMetadata(value: unknown): unknown {
   const copy = structuredClone(value);

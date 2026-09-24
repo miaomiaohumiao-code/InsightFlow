@@ -12,7 +12,9 @@
     "test:sample": "node --conditions=react-server --import tsx scripts/test-sample.ts",
     "build:cloudflare": "opennextjs-cloudflare build",
     "preview:cloudflare": "opennextjs-cloudflare preview",
-    "deploy:cloudflare": "opennextjs-cloudflare deploy"
+    "deploy:cloudflare": "opennextjs-cloudflare deploy",
+    "generate:validators": "tsx scripts/generate-validators.ts",
+    "prebuild": "npm run generate:validators"
   },
   "dependencies": {
     "ajv": "^8.20.0",
