@@ -1,0 +1,27 @@
+name: Cloudflare build
+on:
+  push:
+    branches: [codex/cloudflare-deployment]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build:cloudflare
+        env:
+          AI_PROVIDER: deepseek
+      - run: npx wrangler deploy --dry-run --outdir .cloudflare-check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-build
+          path: .open-next/
+          include-hidden-files: true
+          retention-days: 3

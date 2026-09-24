@@ -22,3 +22,9 @@ Thumbs.db
 
 .vercel
 .env*
+
+# Cloudflare local secrets and generated output
+.dev.vars*
+.wrangler/
+.open-next/
+.cloudflare-check/
