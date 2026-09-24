@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "enum": [
+        "1.0.0"
+      ]
+    },
+    "snapshotId": {
+      "type": "string"
+    },
+    "candidateId": {
+      "type": "string"
+    },
+    "batchId": {
+      "type": "string"
+    },
+    "assignments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "vocId": {
+            "type": "string"
+          },
+          "stance": {
+            "type": "string",
+            "enum": [
+              "supports",
+              "contradicts",
+              "mentions_only",
+              "not_mentioned",
+              "uncertain"
+            ]
+          },
+          "quoteIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "aspectSentiment": {
+            "type": "string",
+            "enum": [
+              "positive",
+              "neutral",
+              "negative",
+              "mixed",
+              "unknown"
+            ]
+          }
+        },
+        "required": [
+          "vocId",
+          "stance",
+          "quoteIds",
+          "aspectSentiment"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "snapshotId",
+    "candidateId",
+    "batchId",
+    "assignments"
+  ],
+  "additionalProperties": false
+}

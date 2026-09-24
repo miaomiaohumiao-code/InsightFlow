@@ -1,0 +1,336 @@
+/* Shared visual layer. Scoped selectors override earlier phase-specific rules. */
+body {
+  --muted: #637169;
+  --line: #e2e8e4;
+}
+body .button {
+  border-radius: 7px;
+  min-height: 42px;
+  font-weight: 500;
+  box-shadow: none;
+  transition:
+    background-color 0.12s,
+    border-color 0.12s;
+}
+body button:disabled {
+  cursor: not-allowed;
+}
+body input,
+body select,
+body textarea {
+  border-radius: 6px;
+}
+body input:focus,
+body select:focus,
+body textarea:focus {
+  outline: 2px solid #9cbea9;
+  outline-offset: 2px;
+}
+body .panel,
+body .source-card,
+body .ins-panel {
+  border-color: #e0e7e2;
+  border-radius: 10px;
+  box-shadow: none;
+  background: #fff;
+}
+body .source-header {
+  padding: 20px 24px;
+  background: #f7f9f7;
+  border-bottom: 1px solid #e2e8e4;
+}
+body .source-title h3 {
+  font-size: 17px;
+  line-height: 1.5;
+}
+body .source-title p {
+  font-size: 12px;
+  color: #66756b;
+  line-height: 1.6;
+}
+body .source-body {
+  padding: 24px;
+}
+.source-section-label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #304b3a;
+}
+.source-section-label span {
+  font-size: 12px;
+  font-weight: 400;
+  color: #6d7b71;
+  margin-left: 12px;
+}
+body .field label {
+  font-size: 13px;
+}
+body .field input:not([type="checkbox"]),
+body .field select {
+  min-height: 44px;
+}
+body .voc-field {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid #e2e8e4;
+}
+body .voc-field textarea {
+  min-height: 300px;
+  padding: 18px;
+  font-size: 14px;
+  line-height: 1.85;
+  background: #fff;
+  resize: vertical;
+  tab-size: 2;
+}
+body .textarea-footer {
+  font-size: 12px;
+  line-height: 1.7;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: #64756a;
+}
+body .add-source {
+  border: 1px solid #67977a;
+  background: #f1f7f3;
+  min-height: 62px;
+  color: #245d3c;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+body .add-source:hover {
+  background: #e7f1ea;
+  border-color: #256d51;
+}
+.preview-health {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px;
+  border: 1px solid #cddfd2;
+  border-left: 4px solid #427554;
+  background: #f5f9f6;
+  border-radius: 8px;
+  margin: 24px 0;
+}
+.preview-health strong {
+  font-size: 17px;
+}
+.preview-health p {
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 8px 0 0;
+  color: #56675b;
+}
+.preview-health.needs-review {
+  border-color: #e4d6b8;
+  border-left-color: #a77a32;
+  background: #fcfaf4;
+}
+body .preview-metrics strong {
+  font-size: 30px;
+  font-weight: 500;
+}
+body .preview-metrics small {
+  font-size: 12px;
+  line-height: 1.6;
+}
+body .record-content {
+  font-size: 14px;
+  line-height: 1.9;
+}
+body .preview-record {
+  padding: 22px;
+  border-radius: 8px;
+}
+body .preview-filters {
+  padding: 16px 0;
+  gap: 12px;
+}
+body .ins-section {
+  margin-top: 48px;
+  scroll-margin-top: 24px;
+}
+body .ins-section-heading {
+  padding-bottom: 18px;
+}
+body .ins-cards-section {
+  border-top: 2px solid #dce7df;
+  padding-top: 32px;
+}
+body .ins-anchor-nav {
+  padding: 16px 0;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+body .ins-anchor-nav a {
+  font-size: 13px;
+}
+body .ins-panel h3 {
+  font-size: 17px;
+  line-height: 1.6;
+}
+body .ins-finding p,
+body .ins-card-factors dd,
+body .ins-implication p {
+  font-size: 13px;
+  line-height: 1.85;
+}
+body .ins-card {
+  border-radius: 10px;
+  padding: 26px;
+  box-shadow: none;
+}
+body .ins-card.is-selected {
+  box-shadow: 0 0 0 1px #558667;
+  border-color: #558667;
+}
+body .ins-card h3 {
+  font-size: 19px;
+  line-height: 1.6;
+  margin-top: 16px;
+}
+body .ins-card-badges {
+  opacity: 0.85;
+  gap: 8px;
+  margin: 12px 0 20px;
+}
+body .ins-opportunities {
+  grid-column: 1/-1;
+  padding: 24px;
+  border: 1px solid #b5cdbb;
+  border-top: 4px solid #39734d;
+  border-radius: 10px;
+  background: #f7faf7;
+  margin-bottom: 12px;
+}
+body .ins-opportunities > .ins-panel {
+  border: 0;
+  background: transparent;
+  padding: 8px 0;
+}
+body .ins-opportunities .ins-data-note {
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0 0 14px;
+  color: #49624f;
+}
+body .ins-opportunities .marketing-point {
+  margin-top: 16px;
+  background: #fff;
+}
+body #marketing-actions {
+  border-top: 2px solid #dce7df;
+  padding-top: 36px;
+}
+body .marketing-result {
+  padding: 30px;
+  margin-top: 28px;
+}
+body .marketing-result > .ins-card-grid {
+  gap: 20px;
+}
+body .marketing-point {
+  border: 0;
+  border-top: 1px solid #e3e9e5;
+  padding: 22px 4px;
+  border-radius: 0;
+}
+body .marketing-point h4 {
+  font-size: 14px;
+  color: #445a4b;
+  margin: 0 0 12px;
+}
+body .marketing-point > p {
+  font-size: 14px;
+  line-height: 1.9;
+}
+body .marketing-point .marketing-reason {
+  font-size: 12px;
+  color: #718076;
+}
+body .marketing-point.strategy-focus {
+  padding: 24px;
+  border: 1px solid #cbdcd0;
+  border-radius: 8px;
+  background: #f5f9f6;
+}
+body .strategy-focus h4 {
+  font-size: 17px;
+  color: #265b39;
+}
+body .strategy-focus > p:first-of-type {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #253f2e;
+}
+body .ab-module {
+  margin-top: 36px;
+  padding-top: 28px;
+}
+@media (min-width: 1100px) {
+  body .ins-main {
+    max-width: 1560px;
+    padding: 40px 44px;
+  }
+  body .marketing-result > .ins-card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 700px) {
+  body .source-header,
+  body .source-body {
+    padding: 16px;
+  }
+  body .source-title h3 {
+    font-size: 15px;
+  }
+  .source-section-label span {
+    display: block;
+    margin: 6px 0 0;
+  }
+  body .voc-field textarea {
+    min-height: 260px;
+    font-size: 16px;
+    padding: 14px;
+  }
+  .preview-health {
+    display: block;
+    padding: 18px;
+  }
+  .preview-health .button {
+    margin-top: 14px;
+  }
+  body .ins-section {
+    margin-top: 32px;
+  }
+  body .ins-card,
+  body .marketing-result,
+  body .ins-opportunities {
+    padding: 18px;
+  }
+  body .marketing-point.strategy-focus {
+    padding: 18px;
+  }
+  body .strategy-focus > p:first-of-type {
+    font-size: 15px;
+  }
+  body .ins-anchor-nav {
+    gap: 16px;
+  }
+  body .ins-card-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  body * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

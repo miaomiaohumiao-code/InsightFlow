@@ -1,0 +1,24 @@
+node_modules/
+.next/
+out/
+coverage/
+test-results/
+*.tsbuildinfo
+*.log
+.env*
+!.env.example
+.vercel/
+.local/
+# Original research materials remain local.
+*.docx
+GitHub 参考链接.txt
+结果/
+*.pem
+*.key
+*.p12
+*.pfx
+.DS_Store
+Thumbs.db
+
+.vercel
+.env*

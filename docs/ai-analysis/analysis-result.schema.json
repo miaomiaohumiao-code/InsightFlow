@@ -1,0 +1,1038 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "enum": [
+        "1.0.0"
+      ]
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "zh-CN"
+      ]
+    },
+    "snapshotId": {
+      "type": "string"
+    },
+    "runId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "inputHash": {
+      "type": "string"
+    },
+    "promptVersion": {
+      "type": "string"
+    },
+    "modelVersion": {
+      "type": "string"
+    },
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "partial"
+          ]
+        },
+        "includedVocCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "analyzedVocCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failedVocIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "excludedDuplicateVocIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "unresolvedBoundaryVocCount": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "status",
+        "includedVocCount",
+        "analyzedVocCount",
+        "failedVocIds",
+        "excludedDuplicateVocIds",
+        "unresolvedBoundaryVocCount"
+      ],
+      "additionalProperties": false
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/SourceSnapshot"
+      }
+    },
+    "overall": {
+      "$ref": "#/$defs/Overall"
+    },
+    "conditional": {
+      "type": "object",
+      "properties": {
+        "platformDifferences": {
+          "$ref": "#/$defs/ComparisonSection"
+        },
+        "timeDifferences": {
+          "$ref": "#/$defs/ComparisonSection"
+        },
+        "brandComparison": {
+          "$ref": "#/$defs/BrandSection"
+        }
+      },
+      "required": [
+        "platformDifferences",
+        "timeDifferences",
+        "brandComparison"
+      ],
+      "additionalProperties": false
+    },
+    "insightCards": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Insight"
+      }
+    },
+    "limitationsZh": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "中文文本；不得凭空补充输入未提供的事实"
+      }
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/AnalysisGroup"
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "language",
+    "snapshotId",
+    "runId",
+    "createdAt",
+    "inputHash",
+    "promptVersion",
+    "modelVersion",
+    "coverage",
+    "sources",
+    "overall",
+    "conditional",
+    "insightCards",
+    "limitationsZh",
+    "groups"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "SourceSnapshot": {
+      "type": "object",
+      "properties": {
+        "sourceId": {
+          "type": "string"
+        },
+        "platformId": {
+          "type": "string"
+        },
+        "platformLabel": {
+          "type": "string"
+        },
+        "brandId": {
+          "type": "string"
+        },
+        "brandType": {
+          "type": "string",
+          "enum": [
+            "own",
+            "competitor"
+          ]
+        },
+        "brandLabel": {
+          "type": "string"
+        },
+        "periodId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "periodStart": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "periodEnd": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "region": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "productTopic": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "sourceId",
+        "platformId",
+        "platformLabel",
+        "brandId",
+        "brandType",
+        "brandLabel",
+        "periodId",
+        "periodStart",
+        "periodEnd",
+        "region",
+        "productTopic"
+      ],
+      "additionalProperties": false
+    },
+    "Overall": {
+      "type": "object",
+      "properties": {
+        "topTopics": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Finding"
+          }
+        },
+        "sentiment": {
+          "$ref": "#/$defs/Sentiment"
+        },
+        "painPoints": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Finding"
+          }
+        },
+        "userNeeds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Finding"
+          }
+        },
+        "purchaseDrivers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Finding"
+          }
+        },
+        "purchaseBarriers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Finding"
+          }
+        }
+      },
+      "required": [
+        "topTopics",
+        "sentiment",
+        "painPoints",
+        "userNeeds",
+        "purchaseDrivers",
+        "purchaseBarriers"
+      ],
+      "additionalProperties": false
+    },
+    "Finding": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "titleZh": {
+          "type": "string",
+          "description": "中文文本；不得凭空补充输入未提供的事实"
+        },
+        "summaryZh": {
+          "type": "string",
+          "description": "中文文本；不得凭空补充输入未提供的事实"
+        },
+        "scopeGroupIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        },
+        "limitationsZh": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "中文文本；不得凭空补充输入未提供的事实"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "titleZh",
+        "summaryZh",
+        "scopeGroupIds",
+        "evidence",
+        "limitationsZh"
+      ],
+      "additionalProperties": false
+    },
+    "Evidence": {
+      "type": "object",
+      "properties": {
+        "supportingVocIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "contradictingVocIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "representativeQuotes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Quote"
+          }
+        },
+        "strength": {
+          "$ref": "#/$defs/EvidenceStrength"
+        }
+      },
+      "required": [
+        "supportingVocIds",
+        "contradictingVocIds",
+        "sourceIds",
+        "representativeQuotes",
+        "strength"
+      ],
+      "additionalProperties": false
+    },
+    "Quote": {
+      "type": "object",
+      "properties": {
+        "quoteId": {
+          "type": "string"
+        },
+        "vocId": {
+          "type": "string"
+        },
+        "sourceId": {
+          "type": "string"
+        },
+        "start": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "originalText": {
+          "type": "string"
+        },
+        "translationZh": {
+          "anyOf": [
+            {
+              "type": "string",
+              "description": "中文文本；不得凭空补充输入未提供的事实"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "quoteId",
+        "vocId",
+        "sourceId",
+        "start",
+        "end",
+        "originalText",
+        "translationZh"
+      ],
+      "additionalProperties": false
+    },
+    "EvidenceStrength": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "$ref": "#/$defs/Level"
+        },
+        "ruleVersion": {
+          "type": "string",
+          "enum": [
+            "evidence-v1"
+          ]
+        },
+        "mentionFrequency": {
+          "type": "object",
+          "properties": {
+            "supportingVocCount": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "contradictingVocCount": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "scopeVocCount": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "supportRate": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "supportingVocCount",
+            "contradictingVocCount",
+            "scopeVocCount",
+            "supportRate"
+          ],
+          "additionalProperties": false
+        },
+        "crossPlatformConsistency": {
+          "$ref": "#/$defs/Consistency"
+        },
+        "timeConsistency": {
+          "$ref": "#/$defs/Consistency"
+        },
+        "sentimentConsistency": {
+          "$ref": "#/$defs/Consistency"
+        },
+        "reasonZh": {
+          "type": "string",
+          "description": "中文文本；不得凭空补充输入未提供的事实"
+        }
+      },
+      "required": [
+        "level",
+        "ruleVersion",
+        "mentionFrequency",
+        "crossPlatformConsistency",
+        "timeConsistency",
+        "sentimentConsistency",
+        "reasonZh"
+      ],
+      "additionalProperties": false
+    },
+    "Level": {
+      "type": "string",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "Consistency": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "measured",
+            "not_applicable",
+            "insufficient_data"
+          ]
+        },
+        "score": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "eligibleGroupCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "supportingGroupCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reasonZh": {
+          "type": "string",
+          "description": "中文文本；不得凭空补充输入未提供的事实"
+        }
+      },
+      "required": [
+        "status",
+        "score",
+        "eligibleGroupCount",
+        "supportingGroupCount",
+        "reasonZh"
+      ],
+      "additionalProperties": false
+    },
+    "Sentiment": {
+      "type": "object",
+      "properties": {
+        "summaryZh": {
+          "anyOf": [
+            {
+              "type": "string",
+              "description": "中文文本；不得凭空补充输入未提供的事实"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        },
+        "unit": {
+          "type": "string",
+          "enum": [
+            "voc_record"
+          ]
+        },
+        "analyzedVocCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "counts": {
+          "$ref": "#/$defs/SentimentCounts"
+        }
+      },
+      "required": [
+        "summaryZh",
+        "evidence",
+        "unit",
+        "analyzedVocCount",
+        "counts"
+      ],
+      "additionalProperties": false
+    },
+    "SentimentCounts": {
+      "type": "object",
+      "properties": {
+        "positive": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "neutral": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "negative": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "mixed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unknown": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "positive",
+        "neutral",
+        "negative",
+        "mixed",
+        "unknown"
+      ],
+      "additionalProperties": false
+    },
+    "ComparisonSection": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/Status"
+        },
+        "reasonZh": {
+          "anyOf": [
+            {
+              "type": "string",
+              "description": "中文文本；不得凭空补充输入未提供的事实"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Comparison"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "reasonZh",
+        "items"
+      ],
+      "additionalProperties": false
+    },
+    "Status": {
+      "type": "string",
+      "enum": [
+        "ready",
+        "not_applicable",
+        "insufficient_data",
+        "no_supported_finding"
+      ]
+    },
+    "Comparison": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "topicFindingId": {
+          "type": "string"
+        },
+        "titleZh": {
+          "type": "string",
+          "description": "中文文本；不得凭空补充输入未提供的事实"
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ComparisonGroup"
+          }
+        },
+        "conclusionZh": {
+          "type": "string",
+          "description": "中文文本；不得凭空补充输入未提供的事实"
+        },
+        "limitationsZh": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "中文文本；不得凭空补充输入未提供的事实"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "topicFindingId",
+        "titleZh",
+        "groups",
+        "conclusionZh",
+        "limitationsZh"
+      ],
+      "additionalProperties": false
+    },
+    "ComparisonGroup": {
+      "type": "object",
+      "properties": {
+        "groupId": {
+          "type": "string"
+        },
+        "observationZh": {
+          "type": "string",
+          "description": "中文文本；不得凭空补充输入未提供的事实"
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        }
+      },
+      "required": [
+        "groupId",
+        "observationZh",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "BrandSection": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/Status"
+        },
+        "reasonZh": {
+          "anyOf": [
+            {
+              "type": "string",
+              "description": "中文文本；不得凭空补充输入未提供的事实"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ownBrandStrengths": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Finding"
+          }
+        },
+        "ownBrandWeaknesses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Finding"
+          }
+        },
+        "competitorStrengths": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Finding"
+          }
+        },
+        "commonPainPoints": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Finding"
+          }
+        },
+        "opportunityGaps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/OpportunityGap"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "reasonZh",
+        "ownBrandStrengths",
+        "ownBrandWeaknesses",
+        "competitorStrengths",
+        "commonPainPoints",
+        "opportunityGaps"
+      ],
+      "additionalProperties": false
+    },
+    "Insight": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "titleZh": {
+          "type": "string",
+          "description": "中文文本；不得凭空补充输入未提供的事实"
+        },
+        "userNeedFindingId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "painPointFindingId": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "purchaseDriverFindingIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "purchaseBarrierFindingIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        },
+        "marketingImplicationZh": {
+          "type": "string",
+          "description": "中文文本；不得凭空补充输入未提供的事实"
+        },
+        "marketingPriority": {
+          "$ref": "#/$defs/Priority"
+        },
+        "limitationsZh": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "中文文本；不得凭空补充输入未提供的事实"
+          }
+        },
+        "targetSegment": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "need_based"
+                  ]
+                },
+                "needFindingId": {
+                  "type": "string"
+                },
+                "labelZh": {
+                  "type": "string",
+                  "description": "中文文本；不得凭空补充输入未提供的事实"
+                }
+              },
+              "required": [
+                "type",
+                "needFindingId",
+                "labelZh"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "originOpportunityId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "titleZh",
+        "userNeedFindingId",
+        "painPointFindingId",
+        "purchaseDriverFindingIds",
+        "purchaseBarrierFindingIds",
+        "evidence",
+        "marketingImplicationZh",
+        "marketingPriority",
+        "limitationsZh",
+        "targetSegment"
+      ],
+      "additionalProperties": false
+    },
+    "Priority": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "$ref": "#/$defs/Level"
+        },
+        "reasonZh": {
+          "type": "string",
+          "description": "中文文本；不得凭空补充输入未提供的事实"
+        }
+      },
+      "required": [
+        "level",
+        "reasonZh"
+      ],
+      "additionalProperties": false
+    },
+    "AnalysisGroup": {
+      "type": "object",
+      "properties": {
+        "groupId": {
+          "type": "string"
+        },
+        "dimension": {
+          "type": "string",
+          "enum": [
+            "platform",
+            "period",
+            "brand"
+          ]
+        },
+        "labelZh": {
+          "type": "string"
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "groupId",
+        "dimension",
+        "labelZh",
+        "sourceIds"
+      ],
+      "additionalProperties": false
+    },
+    "EvidenceRefs": {
+      "type": "object",
+      "properties": {
+        "supportingQuoteIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "maxItems": 5
+        },
+        "contradictingQuoteIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 5
+        }
+      },
+      "required": [
+        "supportingQuoteIds",
+        "contradictingQuoteIds"
+      ],
+      "additionalProperties": false
+    },
+    "OpportunityQualification": {
+      "type": "object",
+      "properties": {
+        "competitorBrandIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "maxItems": 12
+        },
+        "needZh": {
+          "type": "string"
+        },
+        "unmetNeedEvidence": {
+          "$ref": "#/$defs/EvidenceRefs"
+        },
+        "ownBrandFitEvidence": {
+          "$ref": "#/$defs/EvidenceRefs"
+        },
+        "ownBrandFitZh": {
+          "type": "string"
+        },
+        "fitStatus": {
+          "type": "string",
+          "enum": [
+            "observed",
+            "potential"
+          ]
+        },
+        "boundaryZh": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "competitorBrandIds",
+        "needZh",
+        "unmetNeedEvidence",
+        "ownBrandFitEvidence",
+        "ownBrandFitZh",
+        "fitStatus",
+        "boundaryZh"
+      ],
+      "additionalProperties": false
+    },
+    "OpportunityGap": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "titleZh": {
+          "type": "string",
+          "description": "中文文本；不得凭空补充输入未提供的事实"
+        },
+        "summaryZh": {
+          "type": "string",
+          "description": "中文文本；不得凭空补充输入未提供的事实"
+        },
+        "scopeGroupIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "evidence": {
+          "$ref": "#/$defs/Evidence"
+        },
+        "limitationsZh": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "中文文本；不得凭空补充输入未提供的事实"
+          }
+        },
+        "qualification": {
+          "$ref": "#/$defs/OpportunityQualification"
+        }
+      },
+      "required": [
+        "id",
+        "titleZh",
+        "summaryZh",
+        "scopeGroupIds",
+        "evidence",
+        "limitationsZh"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

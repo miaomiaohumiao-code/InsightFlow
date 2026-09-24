@@ -1,0 +1,16 @@
+.env*
+!.env.example
+.local/
+结果/
+*.docx
+GitHub 参考链接.txt
+node_modules/
+.next/
+*.tsbuildinfo
+*.log
+*.pem
+*.key
+*.p12
+*.pfx
+结果/**
+.local/**

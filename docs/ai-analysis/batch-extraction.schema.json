@@ -1,0 +1,154 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "enum": [
+        "1.0.0"
+      ]
+    },
+    "snapshotId": {
+      "type": "string"
+    },
+    "batchId": {
+      "type": "string"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/RecordExtraction"
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "snapshotId",
+    "batchId",
+    "records"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "RecordExtraction": {
+      "type": "object",
+      "properties": {
+        "vocId": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "analyzed",
+            "uncertain",
+            "not_analyzable"
+          ]
+        },
+        "reasonZh": {
+          "anyOf": [
+            {
+              "type": "string",
+              "description": "中文文本；不得凭空补充输入未提供的事实"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sentiment": {
+          "type": "string",
+          "enum": [
+            "positive",
+            "neutral",
+            "negative",
+            "mixed",
+            "unknown"
+          ]
+        },
+        "aspects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Aspect"
+          }
+        }
+      },
+      "required": [
+        "vocId",
+        "status",
+        "reasonZh",
+        "sentiment",
+        "aspects"
+      ],
+      "additionalProperties": false
+    },
+    "Aspect": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "topic",
+            "pain_point",
+            "user_need",
+            "purchase_driver",
+            "purchase_barrier"
+          ]
+        },
+        "labelZh": {
+          "type": "string",
+          "description": "中文文本；不得凭空补充输入未提供的事实"
+        },
+        "assertionZh": {
+          "type": "string",
+          "description": "中文文本；不得凭空补充输入未提供的事实"
+        },
+        "polarity": {
+          "type": "string",
+          "enum": [
+            "positive",
+            "neutral",
+            "negative",
+            "mixed",
+            "unknown"
+          ]
+        },
+        "quotes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ExtractedQuote"
+          }
+        }
+      },
+      "required": [
+        "category",
+        "labelZh",
+        "assertionZh",
+        "polarity",
+        "quotes"
+      ],
+      "additionalProperties": false
+    },
+    "ExtractedQuote": {
+      "type": "object",
+      "properties": {
+        "originalText": {
+          "type": "string"
+        },
+        "translationZh": {
+          "anyOf": [
+            {
+              "type": "string",
+              "description": "中文文本；不得凭空补充输入未提供的事实"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "originalText",
+        "translationZh"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
