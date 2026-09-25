@@ -1,0 +1,48 @@
+{
+  "recommendation": {
+    "testObjectiveZh": "在广告素材场景中，验证以「戴满一小时后的真实感受」作为开头文案，是否比中性邀请式开头更能改善点击率，从而判断舒适度切入的开头吸引点是否值得继续投放。",
+    "hypothesisZh": "相比 A 组基准开头「了解这款耳机」，B 组「戴满一小时，耳罩还压不压耳？」可能提升主要指标 CTR。",
+    "whyTestThisZh": "VOC 显示舒适度是这类人群购买前的主要关注点，且顾虑集中在「戴一小时就夹头」「耳罩硬需摘下休息」，同时存在产品页信息不足、无法判断佩戴舒适度的阻力。营销策略建议从「戴满一小时后的感受」切入，用可判断的问句替代空泛形容词。因此先在最前端验证该开头吸引点能否吸引停留与点击，再决定是否扩大使用。",
+    "context": "广告素材",
+    "coreVariable": "开头吸引点",
+    "groupA": {
+      "variableContentZh": "了解这款耳机"
+    },
+    "groupB": {
+      "variableContentZh": "戴满一小时，耳罩还压不压耳？"
+    },
+    "sharedSetupZh": "两组使用同一支广告素材，除开头文案外，画面、时长、声音、字幕位置、结尾内容、行动号召、优惠信息、投放位置与受众设置均保持一致；开头文案的呈现形式（如字幕或口播）在两组间也保持一致，仅替换文字内容。",
+    "metrics": [
+      {
+        "metric": "CTR",
+        "role": "主要指标",
+        "reasonZh": "开头吸引点直接影响用户是否停留并点击，CTR 适合作为判断该文案变量效果的先行指标。",
+        "measurementZh": "点击次数除以广告展示次数，按投放平台定义的点击口径统计；归因窗口由实际平台定义。"
+      },
+      {
+        "metric": "CVR",
+        "role": "辅助指标",
+        "reasonZh": "开头吸引点可能同时影响后续进入转化路径的人群质量，用 CVR 辅助观察是否存在点击多而转化差的情况。",
+        "measurementZh": "转化事件数除以点击次数，转化事件与分母口径由实际平台定义。"
+      }
+    ],
+    "insightIds": [
+      "insight:comfort"
+    ],
+    "actionFields": [
+      "messageAngle",
+      "creativeDirection",
+      "recommendedPlacement",
+      "coreSellingPoint",
+      "valueProposition"
+    ],
+    "prerequisitesZh": "需先确认广告素材可支持替换开头文案且其余元素完全一致；需核实产品实际长时间佩戴体验是否与「久戴不夹头」方向相符，若不一致则只作测试性沟通而非正式承诺；需确认投放平台可正常区分点击与展示数据。统计方法、样本量与归因窗口由实验负责人和实际平台确定。"
+  },
+  "usage": {
+    "attempts": 1,
+    "inputTokens": 2972,
+    "outputTokens": 543,
+    "unmeteredAttempts": 0,
+    "model": "deepseek/deepseek-flash"
+  }
+}

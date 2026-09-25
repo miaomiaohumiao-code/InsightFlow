@@ -1,0 +1,2772 @@
+{
+  "schemaVersion": "1.0.0",
+  "language": "zh-CN",
+  "snapshotId": "snapshot:c0ee00e8d7f389f306dec3a6eec9227d32ed89e61f3a27138ee995d5c8472d67",
+  "runId": "53fd003c-2aa3-444b-84b0-8c7c95b3bd08",
+  "inputHash": "c0ee00e8d7f389f306dec3a6eec9227d32ed89e61f3a27138ee995d5c8472d67",
+  "createdAt": "2026-09-25T03:41:27.853Z",
+  "promptVersion": "insightflow-v1.1.0-brand-evidence",
+  "modelVersion": "deepseek/deepseek-flash",
+  "sources": [
+    {
+      "sourceId": "demo-source-1",
+      "platformId": "platform:电商评论（模拟）",
+      "platformLabel": "电商评论（模拟）",
+      "brandId": "brand:own:轻声 quietnest",
+      "brandType": "own",
+      "brandLabel": "轻声 QuietNest",
+      "periodId": "period:2026-08-01:2026-08-31",
+      "periodStart": "2026-08-01",
+      "periodEnd": "2026-08-31",
+      "region": null,
+      "productTopic": "头戴式耳机 / 舒适佩戴"
+    },
+    {
+      "sourceId": "demo-source-2",
+      "platformId": "platform:电商评论（模拟）",
+      "platformLabel": "电商评论（模拟）",
+      "brandId": "brand:competitor:声界 audiopeak",
+      "brandType": "competitor",
+      "brandLabel": "声界 AudioPeak",
+      "periodId": "period:2026-08-01:2026-08-31",
+      "periodStart": "2026-08-01",
+      "periodEnd": "2026-08-31",
+      "region": null,
+      "productTopic": "头戴式耳机 / 舒适佩戴"
+    },
+    {
+      "sourceId": "demo-source-3",
+      "platformId": "platform:社区讨论（模拟）",
+      "platformLabel": "社区讨论（模拟）",
+      "brandId": "brand:competitor:音途 tunetrail",
+      "brandType": "competitor",
+      "brandLabel": "音途 TuneTrail",
+      "periodId": "period:2026-08-01:2026-08-31",
+      "periodStart": "2026-08-01",
+      "periodEnd": "2026-08-31",
+      "region": null,
+      "productTopic": "头戴式耳机 / 舒适佩戴"
+    }
+  ],
+  "groups": [
+    {
+      "groupId": "platform:电商评论（模拟）",
+      "dimension": "platform",
+      "labelZh": "平台：电商评论（模拟）",
+      "sourceIds": [
+        "demo-source-1",
+        "demo-source-2"
+      ]
+    },
+    {
+      "groupId": "platform:社区讨论（模拟）",
+      "dimension": "platform",
+      "labelZh": "平台：社区讨论（模拟）",
+      "sourceIds": [
+        "demo-source-3"
+      ]
+    },
+    {
+      "groupId": "period:2026-08-01:2026-08-31",
+      "dimension": "period",
+      "labelZh": "时间段：2026-08-01 · 2026-08-31",
+      "sourceIds": [
+        "demo-source-1",
+        "demo-source-2",
+        "demo-source-3"
+      ]
+    },
+    {
+      "groupId": "brand:own:轻声 quietnest",
+      "dimension": "brand",
+      "labelZh": "品牌：own · 轻声 quietnest",
+      "sourceIds": [
+        "demo-source-1"
+      ]
+    },
+    {
+      "groupId": "brand:competitor:声界 audiopeak",
+      "dimension": "brand",
+      "labelZh": "品牌：competitor · 声界 audiopeak",
+      "sourceIds": [
+        "demo-source-2"
+      ]
+    },
+    {
+      "groupId": "brand:competitor:音途 tunetrail",
+      "dimension": "brand",
+      "labelZh": "品牌：competitor · 音途 tunetrail",
+      "sourceIds": [
+        "demo-source-3"
+      ]
+    }
+  ],
+  "coverage": {
+    "status": "complete",
+    "includedVocCount": 18,
+    "analyzedVocCount": 18,
+    "failedVocIds": [],
+    "excludedDuplicateVocIds": [],
+    "unresolvedBoundaryVocCount": 0
+  },
+  "overall": {
+    "topTopics": [
+      {
+        "id": "topic:comfort",
+        "titleZh": "佩戴舒适度",
+        "summaryZh": "长时间佩戴是否压耳、夹头、闷热是讨论核心，正面与负面体验并存。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-1:0:46:auto",
+            "demo-source-2:0:35:auto",
+            "demo-source-3:0:30:auto",
+            "demo-source-1:46:138:auto",
+            "demo-source-2:35:128:auto",
+            "demo-source-3:30:126:auto",
+            "demo-source-1:138:175:auto",
+            "demo-source-2:128:169:auto",
+            "demo-source-3:126:162:auto",
+            "demo-source-1:175:288:auto",
+            "demo-source-2:169:260:auto",
+            "demo-source-3:162:261:auto",
+            "demo-source-3:261:292:auto",
+            "demo-source-1:321:413:auto",
+            "demo-source-3:292:406:auto"
+          ],
+          "contradictingVocIds": [
+            "demo-source-2:293:386:auto"
+          ],
+          "sourceIds": [
+            "demo-source-1",
+            "demo-source-2",
+            "demo-source-3"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-1:0:46:auto:fragment:0:3:22",
+              "vocId": "demo-source-1:0:46:auto",
+              "sourceId": "demo-source-1",
+              "start": 3,
+              "end": 25,
+              "originalText": "戴着听了两小时没有明显压耳，比我上一副舒服。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-2:0:35:auto:fragment:0:10:11",
+              "vocId": "demo-source-2:0:35:auto",
+              "sourceId": "demo-source-2",
+              "start": 10,
+              "end": 21,
+              "originalText": "但戴一小时就开始夹头。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-2:0:35:auto:fragment:0:21:12",
+              "vocId": "demo-source-2:0:35:auto",
+              "sourceId": "demo-source-2",
+              "start": 21,
+              "end": 33,
+              "originalText": "希望有更轻、更软的耳罩。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-3:0:30:auto:fragment:0:11:17",
+              "vocId": "demo-source-3:0:30:auto",
+              "sourceId": "demo-source-3",
+              "start": 11,
+              "end": 28,
+              "originalText": "耳罩有点硬，戴久了需要摘下来休息。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-2:293:386:auto:fragment:0:34:59",
+              "vocId": "demo-source-2:293:386:auto",
+              "sourceId": "demo-source-2",
+              "start": 327,
+              "end": 386,
+              "originalText": "las almohadillas me resultan incómodas después de una hora.",
+              "translationZh": "一小时后耳垫让我觉得不舒服。"
+            }
+          ],
+          "strength": {
+            "level": "Medium",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 15,
+              "contradictingVocCount": 1,
+              "scopeVocCount": 18,
+              "supportRate": 0.8333333333333334
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "measured",
+              "score": 0.4375,
+              "eligibleGroupCount": 16,
+              "supportingGroupCount": 7,
+              "reasonZh": "以相关方面的明确情感记录为单位，16 条中主导情感为 7 条；混合与未知未计入分母。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 15 条支持、1 条反例；1 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "样本量小，仅反映已读评论"
+        ]
+      },
+      {
+        "id": "topic:anc",
+        "titleZh": "降噪效果",
+        "summaryZh": "降噪被认可，但对人声等特定噪声的削弱有限。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-1:0:46:auto",
+            "demo-source-2:0:35:auto",
+            "demo-source-2:35:128:auto",
+            "demo-source-1:288:321:auto"
+          ],
+          "contradictingVocIds": [],
+          "sourceIds": [
+            "demo-source-1",
+            "demo-source-2"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-1:0:46:auto:fragment:0:25:19",
+              "vocId": "demo-source-1:0:46:auto",
+              "sourceId": "demo-source-1",
+              "start": 25,
+              "end": 44,
+              "originalText": "降噪能减弱风扇声，但人说话还是听得到。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-2:0:35:auto:fragment:0:3:6",
+              "vocId": "demo-source-2:0:35:auto",
+              "sourceId": "demo-source-2",
+              "start": 3,
+              "end": 9,
+              "originalText": "降噪确实不错",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-2:35:128:auto:fragment:0:3:24",
+              "vocId": "demo-source-2:35:128:auto",
+              "sourceId": "demo-source-2",
+              "start": 38,
+              "end": 62,
+              "originalText": "Great noise cancellation",
+              "translationZh": "降噪很好"
+            },
+            {
+              "quoteId": "q:demo-source-1:288:321:auto:fragment:0:16:15",
+              "vocId": "demo-source-1:288:321:auto",
+              "sourceId": "demo-source-1",
+              "start": 304,
+              "end": 319,
+              "originalText": "不过地铁里的降噪没有想象中强。",
+              "translationZh": null
+            }
+          ],
+          "strength": {
+            "level": "Medium",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 4,
+              "contradictingVocCount": 0,
+              "scopeVocCount": 18,
+              "supportRate": 0.2222222222222222
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 4 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "仅少量评论提及具体噪声类型"
+        ]
+      },
+      {
+        "id": "topic:battery",
+        "titleZh": "电池续航",
+        "summaryZh": "续航被正面提及，同时存在希望续航更长的诉求。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-1:46:138:auto",
+            "demo-source-3:162:261:auto",
+            "demo-source-2:260:293:auto",
+            "demo-source-2:293:386:auto"
+          ],
+          "contradictingVocIds": [],
+          "sourceIds": [
+            "demo-source-1",
+            "demo-source-3",
+            "demo-source-2"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-1:46:138:auto:fragment:0:41:49",
+              "vocId": "demo-source-1:46:138:auto",
+              "sourceId": "demo-source-1",
+              "start": 87,
+              "end": 136,
+              "originalText": "I wish the battery lasted longer between charges.",
+              "translationZh": "我希望两次充电之间的续航能更长。"
+            },
+            {
+              "quoteId": "q:demo-source-3:162:261:auto:fragment:0:3:21",
+              "vocId": "demo-source-3:162:261:auto",
+              "sourceId": "demo-source-3",
+              "start": 165,
+              "end": 186,
+              "originalText": "Battery life is good.",
+              "translationZh": "电池续航不错。"
+            },
+            {
+              "quoteId": "q:demo-source-2:260:293:auto:fragment:0:3:6",
+              "vocId": "demo-source-2:260:293:auto",
+              "sourceId": "demo-source-2",
+              "start": 263,
+              "end": 269,
+              "originalText": "续航让我满意",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-2:293:386:auto:fragment:0:3:24",
+              "vocId": "demo-source-2:293:386:auto",
+              "sourceId": "demo-source-2",
+              "start": 296,
+              "end": 320,
+              "originalText": "La batería dura bastante",
+              "translationZh": "电池续航相当久"
+            }
+          ],
+          "strength": {
+            "level": "Medium",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 4,
+              "contradictingVocCount": 0,
+              "scopeVocCount": 18,
+              "supportRate": 0.2222222222222222
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 4 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "续航诉求仅一条"
+        ]
+      },
+      {
+        "id": "topic:connect",
+        "titleZh": "连接与操作",
+        "summaryZh": "连接快速、操作简单、通话够用被正面提及。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-1:288:321:auto",
+            "demo-source-3:261:292:auto"
+          ],
+          "contradictingVocIds": [],
+          "sourceIds": [
+            "demo-source-1",
+            "demo-source-3"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-1:288:321:auto:fragment:0:3:13",
+              "vocId": "demo-source-1:288:321:auto",
+              "sourceId": "demo-source-1",
+              "start": 291,
+              "end": 304,
+              "originalText": "耳机连接很快，操作也简单。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-3:261:292:auto:fragment:0:3:8",
+              "vocId": "demo-source-3:261:292:auto",
+              "sourceId": "demo-source-3",
+              "start": 264,
+              "end": 272,
+              "originalText": "通话和连接都够用",
+              "translationZh": null
+            }
+          ],
+          "strength": {
+            "level": "Low",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 2,
+              "contradictingVocCount": 0,
+              "scopeVocCount": 18,
+              "supportRate": 0.1111111111111111
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 2 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "仅两条证据"
+        ]
+      }
+    ],
+    "painPoints": [
+      {
+        "id": "pain:clamp",
+        "titleZh": "夹头与耳部压迫",
+        "summaryZh": "佩戴一小时即夹头，耳部压迫使长时间使用不适。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-2:0:35:auto",
+            "demo-source-2:35:128:auto",
+            "demo-source-2:169:260:auto"
+          ],
+          "contradictingVocIds": [],
+          "sourceIds": [
+            "demo-source-2"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-2:0:35:auto:fragment:0:10:11",
+              "vocId": "demo-source-2:0:35:auto",
+              "sourceId": "demo-source-2",
+              "start": 10,
+              "end": 21,
+              "originalText": "但戴一小时就开始夹头。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-2:35:128:auto:fragment:0:33:58",
+              "vocId": "demo-source-2:35:128:auto",
+              "sourceId": "demo-source-2",
+              "start": 68,
+              "end": 126,
+              "originalText": "the pressure on my ears makes long sessions uncomfortable.",
+              "translationZh": "耳朵上的压迫让长时间使用不舒服。"
+            },
+            {
+              "quoteId": "q:demo-source-2:169:260:auto:fragment:0:3:86",
+              "vocId": "demo-source-2:169:260:auto",
+              "sourceId": "demo-source-2",
+              "start": 172,
+              "end": 258,
+              "originalText": "I would trade some extra features for a lighter headset that does not squeeze my head.",
+              "translationZh": "我愿意用一些额外功能换取一副更轻、不夹头的耳机。"
+            }
+          ],
+          "strength": {
+            "level": "Medium",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 3,
+              "contradictingVocCount": 0,
+              "scopeVocCount": 18,
+              "supportRate": 0.16666666666666666
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 3 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "反例来自自有品牌，非同一产品"
+        ]
+      },
+      {
+        "id": "pain:earpad",
+        "titleZh": "耳罩偏硬",
+        "summaryZh": "耳罩偏硬，戴久需摘下休息。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-3:0:30:auto",
+            "demo-source-2:293:386:auto"
+          ],
+          "contradictingVocIds": [
+            "demo-source-1:46:138:auto"
+          ],
+          "sourceIds": [
+            "demo-source-3",
+            "demo-source-2",
+            "demo-source-1"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-3:0:30:auto:fragment:0:11:17",
+              "vocId": "demo-source-3:0:30:auto",
+              "sourceId": "demo-source-3",
+              "start": 11,
+              "end": 28,
+              "originalText": "耳罩有点硬，戴久了需要摘下来休息。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-2:293:386:auto:fragment:0:34:59",
+              "vocId": "demo-source-2:293:386:auto",
+              "sourceId": "demo-source-2",
+              "start": 327,
+              "end": 386,
+              "originalText": "las almohadillas me resultan incómodas después de una hora.",
+              "translationZh": "一小时后耳垫让我觉得不舒服。"
+            },
+            {
+              "quoteId": "q:demo-source-1:46:138:auto:fragment:0:3:32",
+              "vocId": "demo-source-1:46:138:auto",
+              "sourceId": "demo-source-1",
+              "start": 49,
+              "end": 81,
+              "originalText": "The ear cushions are comfortable",
+              "translationZh": "耳垫很舒适"
+            }
+          ],
+          "strength": {
+            "level": "Low",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 2,
+              "contradictingVocCount": 1,
+              "scopeVocCount": 18,
+              "supportRate": 0.1111111111111111
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 2 条支持、1 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "证据量少"
+        ]
+      },
+      {
+        "id": "pain:pageinfo",
+        "titleZh": "页面无法判断佩戴感",
+        "summaryZh": "商品页只有参数，无法判断是否舒适、是否闷。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-3:30:126:auto",
+            "demo-source-2:128:169:auto"
+          ],
+          "contradictingVocIds": [],
+          "sourceIds": [
+            "demo-source-3",
+            "demo-source-2"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-3:30:126:auto:fragment:0:26:68",
+              "vocId": "demo-source-3:30:126:auto",
+              "sourceId": "demo-source-3",
+              "start": 56,
+              "end": 124,
+              "originalText": "I cannot tell from the product page whether it will fit comfortably.",
+              "translationZh": "我无法从产品页判断它是否佩戴舒适。"
+            },
+            {
+              "quoteId": "q:demo-source-2:128:169:auto:fragment:0:19:20",
+              "vocId": "demo-source-2:128:169:auto",
+              "sourceId": "demo-source-2",
+              "start": 147,
+              "end": 167,
+              "originalText": "商品页只有参数，看不出长时间佩戴的感觉。",
+              "translationZh": null
+            }
+          ],
+          "strength": {
+            "level": "Low",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 2,
+              "contradictingVocCount": 0,
+              "scopeVocCount": 18,
+              "supportRate": 0.1111111111111111
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 2 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "无相反证据"
+        ]
+      },
+      {
+        "id": "pain:returninfo",
+        "titleZh": "退货信息不清晰",
+        "summaryZh": "退货流程说明难找、退货条件不清晰，影响下单信心。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-2:260:293:auto",
+            "demo-source-1:321:413:auto",
+            "demo-source-3:292:406:auto"
+          ],
+          "contradictingVocIds": [],
+          "sourceIds": [
+            "demo-source-2",
+            "demo-source-1",
+            "demo-source-3"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-2:260:293:auto:fragment:0:10:21",
+              "vocId": "demo-source-2:260:293:auto",
+              "sourceId": "demo-source-2",
+              "start": 270,
+              "end": 291,
+              "originalText": "但是退货流程说明太难找了，下单前有些犹豫。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-1:321:413:auto:fragment:0:31:61",
+              "vocId": "demo-source-1:321:413:auto",
+              "sourceId": "demo-source-1",
+              "start": 352,
+              "end": 413,
+              "originalText": "me gustaría ver información más clara sobre las devoluciones.",
+              "translationZh": "我希望看到关于退货的更清晰信息。"
+            },
+            {
+              "quoteId": "q:demo-source-3:292:406:auto:fragment:0:61:53",
+              "vocId": "demo-source-3:292:406:auto",
+              "sourceId": "demo-source-3",
+              "start": 353,
+              "end": 406,
+              "originalText": "Les conditions de retour devraient être plus claires.",
+              "translationZh": "退货条件应该更清晰。"
+            }
+          ],
+          "strength": {
+            "level": "Medium",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 3,
+              "contradictingVocCount": 0,
+              "scopeVocCount": 18,
+              "supportRate": 0.16666666666666666
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 3 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "无相反证据"
+        ]
+      }
+    ],
+    "userNeeds": [
+      {
+        "id": "need:lightsoft",
+        "titleZh": "更轻更软的佩戴",
+        "summaryZh": "希望耳罩更轻更软、不夹头，并愿以功能换取轻量。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-2:0:35:auto",
+            "demo-source-2:169:260:auto",
+            "demo-source-3:261:292:auto"
+          ],
+          "contradictingVocIds": [],
+          "sourceIds": [
+            "demo-source-2",
+            "demo-source-3"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-2:0:35:auto:fragment:0:10:11",
+              "vocId": "demo-source-2:0:35:auto",
+              "sourceId": "demo-source-2",
+              "start": 10,
+              "end": 21,
+              "originalText": "但戴一小时就开始夹头。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-2:0:35:auto:fragment:0:21:12",
+              "vocId": "demo-source-2:0:35:auto",
+              "sourceId": "demo-source-2",
+              "start": 21,
+              "end": 33,
+              "originalText": "希望有更轻、更软的耳罩。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-2:169:260:auto:fragment:0:3:86",
+              "vocId": "demo-source-2:169:260:auto",
+              "sourceId": "demo-source-2",
+              "start": 172,
+              "end": 258,
+              "originalText": "I would trade some extra features for a lighter headset that does not squeeze my head.",
+              "translationZh": "我愿意用一些额外功能换取一副更轻、不夹头的耳机。"
+            },
+            {
+              "quoteId": "q:demo-source-3:261:292:auto:fragment:0:12:17",
+              "vocId": "demo-source-3:261:292:auto",
+              "sourceId": "demo-source-3",
+              "start": 273,
+              "end": 290,
+              "originalText": "我需要的是轻一点、长时间戴着不累。",
+              "translationZh": null
+            }
+          ],
+          "strength": {
+            "level": "Medium",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 3,
+              "contradictingVocCount": 0,
+              "scopeVocCount": 18,
+              "supportRate": 0.16666666666666666
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "此结论不要求同方向情感。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 3 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "均为竞品用户诉求"
+        ]
+      },
+      {
+        "id": "need:longwear",
+        "titleZh": "长时间佩戴不闷",
+        "summaryZh": "关心长时间佩戴是否闷，希望了解真实佩戴体验。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-1:138:175:auto",
+            "demo-source-3:261:292:auto",
+            "demo-source-2:293:386:auto"
+          ],
+          "contradictingVocIds": [],
+          "sourceIds": [
+            "demo-source-1",
+            "demo-source-3",
+            "demo-source-2"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-1:138:175:auto:fragment:0:3:13",
+              "vocId": "demo-source-1:138:175:auto",
+              "sourceId": "demo-source-1",
+              "start": 141,
+              "end": 154,
+              "originalText": "我更关心长时间佩戴会不会闷",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-3:261:292:auto:fragment:0:12:17",
+              "vocId": "demo-source-3:261:292:auto",
+              "sourceId": "demo-source-3",
+              "start": 273,
+              "end": 290,
+              "originalText": "我需要的是轻一点、长时间戴着不累。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-2:293:386:auto:fragment:0:34:59",
+              "vocId": "demo-source-2:293:386:auto",
+              "sourceId": "demo-source-2",
+              "start": 327,
+              "end": 386,
+              "originalText": "las almohadillas me resultan incómodas después de una hora.",
+              "translationZh": "一小时后耳垫让我觉得不舒服。"
+            }
+          ],
+          "strength": {
+            "level": "Medium",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 3,
+              "contradictingVocCount": 0,
+              "scopeVocCount": 18,
+              "supportRate": 0.16666666666666666
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "此结论不要求同方向情感。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 3 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "为关注点而非已购体验"
+        ]
+      },
+      {
+        "id": "need:proof",
+        "titleZh": "佩戴演示与退换说明",
+        "summaryZh": "希望页面展示耳罩材质、长时间佩戴演示与试戴退换说明。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-1:138:175:auto",
+            "demo-source-3:126:162:auto",
+            "demo-source-2:260:293:auto",
+            "demo-source-1:321:413:auto",
+            "demo-source-3:292:406:auto"
+          ],
+          "contradictingVocIds": [],
+          "sourceIds": [
+            "demo-source-1",
+            "demo-source-3",
+            "demo-source-2"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-1:138:175:auto:fragment:0:17:18",
+              "vocId": "demo-source-1:138:175:auto",
+              "sourceId": "demo-source-1",
+              "start": 155,
+              "end": 173,
+              "originalText": "页面应该展示耳罩材质和真实佩戴体验。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-3:126:162:auto:fragment:0:3:31",
+              "vocId": "demo-source-3:126:162:auto",
+              "sourceId": "demo-source-3",
+              "start": 129,
+              "end": 160,
+              "originalText": "如果能看到长时间佩戴演示和明确的试戴退换说明，我会更愿意考虑。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-2:260:293:auto:fragment:0:10:21",
+              "vocId": "demo-source-2:260:293:auto",
+              "sourceId": "demo-source-2",
+              "start": 270,
+              "end": 291,
+              "originalText": "但是退货流程说明太难找了，下单前有些犹豫。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-1:321:413:auto:fragment:0:31:61",
+              "vocId": "demo-source-1:321:413:auto",
+              "sourceId": "demo-source-1",
+              "start": 352,
+              "end": 413,
+              "originalText": "me gustaría ver información más clara sobre las devoluciones.",
+              "translationZh": "我希望看到关于退货的更清晰信息。"
+            },
+            {
+              "quoteId": "q:demo-source-3:292:406:auto:fragment:0:61:53",
+              "vocId": "demo-source-3:292:406:auto",
+              "sourceId": "demo-source-3",
+              "start": 353,
+              "end": 406,
+              "originalText": "Les conditions de retour devraient être plus claires.",
+              "translationZh": "退货条件应该更清晰。"
+            }
+          ],
+          "strength": {
+            "level": "Medium",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 5,
+              "contradictingVocCount": 0,
+              "scopeVocCount": 18,
+              "supportRate": 0.2777777777777778
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "此结论不要求同方向情感。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 5 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "无相反证据"
+        ]
+      },
+      {
+        "id": "need:battery",
+        "titleZh": "更长续航",
+        "summaryZh": "希望两次充电之间续航更长。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-1:46:138:auto"
+          ],
+          "contradictingVocIds": [
+            "demo-source-3:162:261:auto"
+          ],
+          "sourceIds": [
+            "demo-source-1",
+            "demo-source-3"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-1:46:138:auto:fragment:0:41:49",
+              "vocId": "demo-source-1:46:138:auto",
+              "sourceId": "demo-source-1",
+              "start": 87,
+              "end": 136,
+              "originalText": "I wish the battery lasted longer between charges.",
+              "translationZh": "我希望两次充电之间的续航能更长。"
+            },
+            {
+              "quoteId": "q:demo-source-3:162:261:auto:fragment:0:3:21",
+              "vocId": "demo-source-3:162:261:auto",
+              "sourceId": "demo-source-3",
+              "start": 165,
+              "end": 186,
+              "originalText": "Battery life is good.",
+              "translationZh": "电池续航不错。"
+            }
+          ],
+          "strength": {
+            "level": "Low",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 1,
+              "contradictingVocCount": 1,
+              "scopeVocCount": 18,
+              "supportRate": 0.05555555555555555
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "此结论不要求同方向情感。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 1 条支持、1 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "仅一条诉求"
+        ]
+      }
+    ],
+    "purchaseDrivers": [
+      {
+        "id": "driver:comfortfirst",
+        "titleZh": "舒适度优先",
+        "summaryZh": "购买前主要关注舒适度，胜过音效模式与预设数量。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-2:128:169:auto",
+            "demo-source-1:175:288:auto",
+            "demo-source-3:162:261:auto",
+            "demo-source-3:292:406:auto"
+          ],
+          "contradictingVocIds": [],
+          "sourceIds": [
+            "demo-source-2",
+            "demo-source-1",
+            "demo-source-3"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-2:128:169:auto:fragment:0:8:11",
+              "vocId": "demo-source-2:128:169:auto",
+              "sourceId": "demo-source-2",
+              "start": 136,
+              "end": 147,
+              "originalText": "可我最在意的是舒适度。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-1:175:288:auto:fragment:0:3:59",
+              "vocId": "demo-source-1:175:288:auto",
+              "sourceId": "demo-source-1",
+              "start": 178,
+              "end": 237,
+              "originalText": "Comfort matters more to me than a long list of sound modes.",
+              "translationZh": "对我来说，舒适度比一长串音效模式更重要。"
+            },
+            {
+              "quoteId": "q:demo-source-3:162:261:auto:fragment:0:25:72",
+              "vocId": "demo-source-3:162:261:auto",
+              "sourceId": "demo-source-3",
+              "start": 187,
+              "end": 259,
+              "originalText": "My main concern before buying is comfort rather than more audio presets.",
+              "translationZh": "我购买前的主要关注点是舒适度，而不是更多音频预设。"
+            },
+            {
+              "quoteId": "q:demo-source-3:292:406:auto:fragment:0:3:57",
+              "vocId": "demo-source-3:292:406:auto",
+              "sourceId": "demo-source-3",
+              "start": 295,
+              "end": 352,
+              "originalText": "Je préfère un casque confortable à davantage de réglages.",
+              "translationZh": "比起更多调节选项，我更喜欢舒适的耳机。"
+            }
+          ],
+          "strength": {
+            "level": "Medium",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 4,
+              "contradictingVocCount": 0,
+              "scopeVocCount": 18,
+              "supportRate": 0.2222222222222222
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 4 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "证据量少"
+        ]
+      },
+      {
+        "id": "driver:lightfeel",
+        "titleZh": "长时间聆听的轻便感",
+        "summaryZh": "长时间聆听时感觉轻便，构成正面购买理由。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-1:175:288:auto",
+            "demo-source-3:261:292:auto"
+          ],
+          "contradictingVocIds": [
+            "demo-source-2:293:386:auto"
+          ],
+          "sourceIds": [
+            "demo-source-1",
+            "demo-source-3",
+            "demo-source-2"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-1:175:288:auto:fragment:0:63:48",
+              "vocId": "demo-source-1:175:288:auto",
+              "sourceId": "demo-source-1",
+              "start": 238,
+              "end": 286,
+              "originalText": "These feel light during long listening sessions.",
+              "translationZh": "在长时间聆听时这些感觉很轻。"
+            },
+            {
+              "quoteId": "q:demo-source-3:261:292:auto:fragment:0:12:17",
+              "vocId": "demo-source-3:261:292:auto",
+              "sourceId": "demo-source-3",
+              "start": 273,
+              "end": 290,
+              "originalText": "我需要的是轻一点、长时间戴着不累。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-2:293:386:auto:fragment:0:34:59",
+              "vocId": "demo-source-2:293:386:auto",
+              "sourceId": "demo-source-2",
+              "start": 327,
+              "end": 386,
+              "originalText": "las almohadillas me resultan incómodas después de una hora.",
+              "translationZh": "一小时后耳垫让我觉得不舒服。"
+            }
+          ],
+          "strength": {
+            "level": "Low",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 2,
+              "contradictingVocCount": 1,
+              "scopeVocCount": 18,
+              "supportRate": 0.1111111111111111
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 2 条支持、1 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "仅自有品牌一条"
+        ]
+      },
+      {
+        "id": "driver:batterylong",
+        "titleZh": "续航持久带来的满意",
+        "summaryZh": "续航持久被正面提及，构成满意理由。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-3:162:261:auto",
+            "demo-source-2:260:293:auto",
+            "demo-source-2:293:386:auto"
+          ],
+          "contradictingVocIds": [],
+          "sourceIds": [
+            "demo-source-3",
+            "demo-source-2"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-3:162:261:auto:fragment:0:3:21",
+              "vocId": "demo-source-3:162:261:auto",
+              "sourceId": "demo-source-3",
+              "start": 165,
+              "end": 186,
+              "originalText": "Battery life is good.",
+              "translationZh": "电池续航不错。"
+            },
+            {
+              "quoteId": "q:demo-source-2:260:293:auto:fragment:0:3:6",
+              "vocId": "demo-source-2:260:293:auto",
+              "sourceId": "demo-source-2",
+              "start": 263,
+              "end": 269,
+              "originalText": "续航让我满意",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-2:293:386:auto:fragment:0:3:24",
+              "vocId": "demo-source-2:293:386:auto",
+              "sourceId": "demo-source-2",
+              "start": 296,
+              "end": 320,
+              "originalText": "La batería dura bastante",
+              "translationZh": "电池续航相当久"
+            }
+          ],
+          "strength": {
+            "level": "Medium",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 3,
+              "contradictingVocCount": 0,
+              "scopeVocCount": 18,
+              "supportRate": 0.16666666666666666
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 3 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "仅竞品来源"
+        ]
+      }
+    ],
+    "purchaseBarriers": [
+      {
+        "id": "barrier:fitunknown",
+        "titleZh": "无法判断是否佩戴舒适",
+        "summaryZh": "产品页信息不足，无法判断佩戴舒适度，构成购买顾虑。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-3:30:126:auto"
+          ],
+          "contradictingVocIds": [],
+          "sourceIds": [
+            "demo-source-3"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-3:30:126:auto:fragment:0:26:68",
+              "vocId": "demo-source-3:30:126:auto",
+              "sourceId": "demo-source-3",
+              "start": 56,
+              "end": 124,
+              "originalText": "I cannot tell from the product page whether it will fit comfortably.",
+              "translationZh": "我无法从产品页判断它是否佩戴舒适。"
+            }
+          ],
+          "strength": {
+            "level": "Low",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 1,
+              "contradictingVocCount": 0,
+              "scopeVocCount": 18,
+              "supportRate": 0.05555555555555555
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 1 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "无相反证据"
+        ]
+      },
+      {
+        "id": "barrier:clampbuy",
+        "titleZh": "夹头影响购买意愿",
+        "summaryZh": "夹头与压迫感使部分用户考虑以功能换取轻量款。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-2:169:260:auto"
+          ],
+          "contradictingVocIds": [],
+          "sourceIds": [
+            "demo-source-2"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-2:169:260:auto:fragment:0:3:86",
+              "vocId": "demo-source-2:169:260:auto",
+              "sourceId": "demo-source-2",
+              "start": 172,
+              "end": 258,
+              "originalText": "I would trade some extra features for a lighter headset that does not squeeze my head.",
+              "translationZh": "我愿意用一些额外功能换取一副更轻、不夹头的耳机。"
+            }
+          ],
+          "strength": {
+            "level": "Low",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 1,
+              "contradictingVocCount": 0,
+              "scopeVocCount": 18,
+              "supportRate": 0.05555555555555555
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 1 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "仅一条证据"
+        ]
+      },
+      {
+        "id": "barrier:returnunclear",
+        "titleZh": "退货信息不清导致犹豫",
+        "summaryZh": "退货流程说明难找、退货条件不清晰，使下单前犹豫。",
+        "scopeGroupIds": [],
+        "evidence": {
+          "supportingVocIds": [
+            "demo-source-2:260:293:auto",
+            "demo-source-1:321:413:auto",
+            "demo-source-3:292:406:auto"
+          ],
+          "contradictingVocIds": [],
+          "sourceIds": [
+            "demo-source-2",
+            "demo-source-1",
+            "demo-source-3"
+          ],
+          "representativeQuotes": [
+            {
+              "quoteId": "q:demo-source-2:260:293:auto:fragment:0:10:21",
+              "vocId": "demo-source-2:260:293:auto",
+              "sourceId": "demo-source-2",
+              "start": 270,
+              "end": 291,
+              "originalText": "但是退货流程说明太难找了，下单前有些犹豫。",
+              "translationZh": null
+            },
+            {
+              "quoteId": "q:demo-source-1:321:413:auto:fragment:0:31:61",
+              "vocId": "demo-source-1:321:413:auto",
+              "sourceId": "demo-source-1",
+              "start": 352,
+              "end": 413,
+              "originalText": "me gustaría ver información más clara sobre las devoluciones.",
+              "translationZh": "我希望看到关于退货的更清晰信息。"
+            },
+            {
+              "quoteId": "q:demo-source-3:292:406:auto:fragment:0:61:53",
+              "vocId": "demo-source-3:292:406:auto",
+              "sourceId": "demo-source-3",
+              "start": 353,
+              "end": 406,
+              "originalText": "Les conditions de retour devraient être plus claires.",
+              "translationZh": "退货条件应该更清晰。"
+            }
+          ],
+          "strength": {
+            "level": "Medium",
+            "ruleVersion": "evidence-v1",
+            "mentionFrequency": {
+              "supportingVocCount": 3,
+              "contradictingVocCount": 0,
+              "scopeVocCount": 18,
+              "supportRate": 0.16666666666666666
+            },
+            "crossPlatformConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+            },
+            "timeConsistency": {
+              "status": "not_applicable",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "本结论范围不足两个有效组。"
+            },
+            "sentimentConsistency": {
+              "status": "insufficient_data",
+              "score": null,
+              "eligibleGroupCount": 0,
+              "supportingGroupCount": 0,
+              "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+            },
+            "reasonZh": "在 18 条范围内记录中有 3 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+          }
+        },
+        "limitationsZh": [
+          "无相反证据"
+        ]
+      }
+    ],
+    "sentiment": {
+      "summaryZh": "本次 18 条评论中：正面 1 条、中立 2 条、负面 1 条、混合 14 条、无法判断 0 条。",
+      "evidence": {
+        "supportingVocIds": [],
+        "contradictingVocIds": [],
+        "sourceIds": [],
+        "representativeQuotes": [],
+        "strength": {
+          "level": "Low",
+          "ruleVersion": "evidence-v1",
+          "mentionFrequency": {
+            "supportingVocCount": 0,
+            "contradictingVocCount": 0,
+            "scopeVocCount": 18,
+            "supportRate": 0
+          },
+          "crossPlatformConsistency": {
+            "status": "not_applicable",
+            "score": null,
+            "eligibleGroupCount": 0,
+            "supportingGroupCount": 0,
+            "reasonZh": "总体情感为逐条分类汇总，不作单一结论证据评级。"
+          },
+          "timeConsistency": {
+            "status": "not_applicable",
+            "score": null,
+            "eligibleGroupCount": 0,
+            "supportingGroupCount": 0,
+            "reasonZh": "总体情感为逐条分类汇总，不作单一结论证据评级。"
+          },
+          "sentimentConsistency": {
+            "status": "not_applicable",
+            "score": null,
+            "eligibleGroupCount": 0,
+            "supportingGroupCount": 0,
+            "reasonZh": "总体情感为逐条分类汇总，不作单一结论证据评级。"
+          },
+          "reasonZh": "该字段不承载独立事实断言，使用下方逐条情感计数。"
+        }
+      },
+      "unit": "voc_record",
+      "analyzedVocCount": 18,
+      "counts": {
+        "positive": 1,
+        "neutral": 2,
+        "negative": 1,
+        "mixed": 14,
+        "unknown": 0
+      }
+    }
+  },
+  "conditional": {
+    "platformDifferences": {
+      "status": "insufficient_data",
+      "reasonZh": "当前有 2 个平台，尚未形成通过核验的差异结论。需补充可比样本并控制品牌、平台、时间、产品与地区差异；这不代表不存在共同品牌或真实差异。",
+      "items": []
+    },
+    "timeDifferences": {
+      "status": "not_applicable",
+      "reasonZh": "不足两个已知时间范围，不能推断时间差异。",
+      "items": []
+    },
+    "brandComparison": {
+      "status": "ready",
+      "reasonZh": null,
+      "ownBrandStrengths": [
+        {
+          "id": "own:strength:comfort",
+          "titleZh": "长时间佩戴舒适",
+          "summaryZh": "自有品牌被描述为两小时无明显压耳、耳垫舒适且轻便。",
+          "scopeGroupIds": [
+            "brand:own:轻声 quietnest"
+          ],
+          "evidence": {
+            "supportingVocIds": [
+              "demo-source-1:0:46:auto",
+              "demo-source-1:46:138:auto",
+              "demo-source-1:175:288:auto"
+            ],
+            "contradictingVocIds": [],
+            "sourceIds": [
+              "demo-source-1"
+            ],
+            "representativeQuotes": [
+              {
+                "quoteId": "q:demo-source-1:0:46:auto:fragment:0:3:22",
+                "vocId": "demo-source-1:0:46:auto",
+                "sourceId": "demo-source-1",
+                "start": 3,
+                "end": 25,
+                "originalText": "戴着听了两小时没有明显压耳，比我上一副舒服。",
+                "translationZh": null
+              },
+              {
+                "quoteId": "q:demo-source-1:46:138:auto:fragment:0:3:32",
+                "vocId": "demo-source-1:46:138:auto",
+                "sourceId": "demo-source-1",
+                "start": 49,
+                "end": 81,
+                "originalText": "The ear cushions are comfortable",
+                "translationZh": "耳垫很舒适"
+              },
+              {
+                "quoteId": "q:demo-source-1:175:288:auto:fragment:0:63:48",
+                "vocId": "demo-source-1:175:288:auto",
+                "sourceId": "demo-source-1",
+                "start": 238,
+                "end": 286,
+                "originalText": "These feel light during long listening sessions.",
+                "translationZh": "在长时间聆听时这些感觉很轻。"
+              }
+            ],
+            "strength": {
+              "level": "Medium",
+              "ruleVersion": "evidence-v1",
+              "mentionFrequency": {
+                "supportingVocCount": 3,
+                "contradictingVocCount": 0,
+                "scopeVocCount": 6,
+                "supportRate": 0.5
+              },
+              "crossPlatformConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "timeConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "sentimentConsistency": {
+                "status": "insufficient_data",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+              },
+              "reasonZh": "在 6 条范围内记录中有 3 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+            }
+          },
+          "limitationsZh": [
+            "仅自有品牌来源"
+          ]
+        },
+        {
+          "id": "own:strength:connect",
+          "titleZh": "连接与操作便捷",
+          "summaryZh": "自有品牌被描述为连接很快、操作简单。",
+          "scopeGroupIds": [
+            "brand:own:轻声 quietnest"
+          ],
+          "evidence": {
+            "supportingVocIds": [
+              "demo-source-1:288:321:auto"
+            ],
+            "contradictingVocIds": [],
+            "sourceIds": [
+              "demo-source-1"
+            ],
+            "representativeQuotes": [
+              {
+                "quoteId": "q:demo-source-1:288:321:auto:fragment:0:3:13",
+                "vocId": "demo-source-1:288:321:auto",
+                "sourceId": "demo-source-1",
+                "start": 291,
+                "end": 304,
+                "originalText": "耳机连接很快，操作也简单。",
+                "translationZh": null
+              }
+            ],
+            "strength": {
+              "level": "Low",
+              "ruleVersion": "evidence-v1",
+              "mentionFrequency": {
+                "supportingVocCount": 1,
+                "contradictingVocCount": 0,
+                "scopeVocCount": 6,
+                "supportRate": 0.16666666666666666
+              },
+              "crossPlatformConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "timeConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "sentimentConsistency": {
+                "status": "insufficient_data",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+              },
+              "reasonZh": "在 6 条范围内记录中有 1 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+            }
+          },
+          "limitationsZh": [
+            "仅一条证据"
+          ]
+        }
+      ],
+      "ownBrandWeaknesses": [
+        {
+          "id": "own:weak:ancvoice",
+          "titleZh": "降噪对人声有限",
+          "summaryZh": "降噪能减弱风扇声，但人说话仍能听到，地铁降噪不如预期。",
+          "scopeGroupIds": [
+            "brand:own:轻声 quietnest"
+          ],
+          "evidence": {
+            "supportingVocIds": [
+              "demo-source-1:0:46:auto"
+            ],
+            "contradictingVocIds": [],
+            "sourceIds": [
+              "demo-source-1"
+            ],
+            "representativeQuotes": [
+              {
+                "quoteId": "q:demo-source-1:0:46:auto:fragment:0:25:19",
+                "vocId": "demo-source-1:0:46:auto",
+                "sourceId": "demo-source-1",
+                "start": 25,
+                "end": 44,
+                "originalText": "降噪能减弱风扇声，但人说话还是听得到。",
+                "translationZh": null
+              }
+            ],
+            "strength": {
+              "level": "Low",
+              "ruleVersion": "evidence-v1",
+              "mentionFrequency": {
+                "supportingVocCount": 1,
+                "contradictingVocCount": 0,
+                "scopeVocCount": 6,
+                "supportRate": 0.16666666666666666
+              },
+              "crossPlatformConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "timeConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "sentimentConsistency": {
+                "status": "insufficient_data",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+              },
+              "reasonZh": "在 6 条范围内记录中有 1 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+            }
+          },
+          "limitationsZh": [
+            "证据量少"
+          ]
+        },
+        {
+          "id": "own:weak:returninfo",
+          "titleZh": "退货信息不清晰",
+          "summaryZh": "自有品牌用户希望看到更清晰的退货信息。",
+          "scopeGroupIds": [
+            "brand:own:轻声 quietnest"
+          ],
+          "evidence": {
+            "supportingVocIds": [
+              "demo-source-1:321:413:auto"
+            ],
+            "contradictingVocIds": [],
+            "sourceIds": [
+              "demo-source-1"
+            ],
+            "representativeQuotes": [
+              {
+                "quoteId": "q:demo-source-1:321:413:auto:fragment:0:31:61",
+                "vocId": "demo-source-1:321:413:auto",
+                "sourceId": "demo-source-1",
+                "start": 352,
+                "end": 413,
+                "originalText": "me gustaría ver información más clara sobre las devoluciones.",
+                "translationZh": "我希望看到关于退货的更清晰信息。"
+              }
+            ],
+            "strength": {
+              "level": "Low",
+              "ruleVersion": "evidence-v1",
+              "mentionFrequency": {
+                "supportingVocCount": 1,
+                "contradictingVocCount": 0,
+                "scopeVocCount": 6,
+                "supportRate": 0.16666666666666666
+              },
+              "crossPlatformConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "timeConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "sentimentConsistency": {
+                "status": "insufficient_data",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+              },
+              "reasonZh": "在 6 条范围内记录中有 1 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+            }
+          },
+          "limitationsZh": [
+            "仅一条证据"
+          ]
+        }
+      ],
+      "competitorStrengths": [
+        {
+          "id": "comp:audiopeak:anc",
+          "titleZh": "声界降噪表现好",
+          "summaryZh": "声界用户认可降噪确实不错、降噪很好。",
+          "scopeGroupIds": [
+            "brand:competitor:声界 audiopeak"
+          ],
+          "evidence": {
+            "supportingVocIds": [
+              "demo-source-2:0:35:auto",
+              "demo-source-2:35:128:auto"
+            ],
+            "contradictingVocIds": [],
+            "sourceIds": [
+              "demo-source-2"
+            ],
+            "representativeQuotes": [
+              {
+                "quoteId": "q:demo-source-2:0:35:auto:fragment:0:3:6",
+                "vocId": "demo-source-2:0:35:auto",
+                "sourceId": "demo-source-2",
+                "start": 3,
+                "end": 9,
+                "originalText": "降噪确实不错",
+                "translationZh": null
+              },
+              {
+                "quoteId": "q:demo-source-2:35:128:auto:fragment:0:3:24",
+                "vocId": "demo-source-2:35:128:auto",
+                "sourceId": "demo-source-2",
+                "start": 38,
+                "end": 62,
+                "originalText": "Great noise cancellation",
+                "translationZh": "降噪很好"
+              }
+            ],
+            "strength": {
+              "level": "Low",
+              "ruleVersion": "evidence-v1",
+              "mentionFrequency": {
+                "supportingVocCount": 2,
+                "contradictingVocCount": 0,
+                "scopeVocCount": 6,
+                "supportRate": 0.3333333333333333
+              },
+              "crossPlatformConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "timeConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "sentimentConsistency": {
+                "status": "insufficient_data",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+              },
+              "reasonZh": "在 6 条范围内记录中有 2 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+            }
+          },
+          "limitationsZh": [
+            "仅声界来源"
+          ]
+        },
+        {
+          "id": "comp:audiopeak:battery",
+          "titleZh": "声界续航持久",
+          "summaryZh": "声界用户认为续航让人满意、电池续航相当久。",
+          "scopeGroupIds": [
+            "brand:competitor:声界 audiopeak"
+          ],
+          "evidence": {
+            "supportingVocIds": [
+              "demo-source-2:260:293:auto",
+              "demo-source-2:293:386:auto"
+            ],
+            "contradictingVocIds": [],
+            "sourceIds": [
+              "demo-source-2"
+            ],
+            "representativeQuotes": [
+              {
+                "quoteId": "q:demo-source-2:260:293:auto:fragment:0:3:6",
+                "vocId": "demo-source-2:260:293:auto",
+                "sourceId": "demo-source-2",
+                "start": 263,
+                "end": 269,
+                "originalText": "续航让我满意",
+                "translationZh": null
+              },
+              {
+                "quoteId": "q:demo-source-2:293:386:auto:fragment:0:3:24",
+                "vocId": "demo-source-2:293:386:auto",
+                "sourceId": "demo-source-2",
+                "start": 296,
+                "end": 320,
+                "originalText": "La batería dura bastante",
+                "translationZh": "电池续航相当久"
+              }
+            ],
+            "strength": {
+              "level": "Low",
+              "ruleVersion": "evidence-v1",
+              "mentionFrequency": {
+                "supportingVocCount": 2,
+                "contradictingVocCount": 0,
+                "scopeVocCount": 6,
+                "supportRate": 0.3333333333333333
+              },
+              "crossPlatformConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "timeConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "sentimentConsistency": {
+                "status": "insufficient_data",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+              },
+              "reasonZh": "在 6 条范围内记录中有 2 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+            }
+          },
+          "limitationsZh": [
+            "仅声界来源"
+          ]
+        },
+        {
+          "id": "comp:tunetrail:price",
+          "titleZh": "音途价格公道",
+          "summaryZh": "音途用户认为价格可以接受、价格公道。",
+          "scopeGroupIds": [
+            "brand:competitor:音途 tunetrail"
+          ],
+          "evidence": {
+            "supportingVocIds": [
+              "demo-source-3:0:30:auto",
+              "demo-source-3:30:126:auto"
+            ],
+            "contradictingVocIds": [],
+            "sourceIds": [
+              "demo-source-3"
+            ],
+            "representativeQuotes": [
+              {
+                "quoteId": "q:demo-source-3:0:30:auto:fragment:0:3:6",
+                "vocId": "demo-source-3:0:30:auto",
+                "sourceId": "demo-source-3",
+                "start": 3,
+                "end": 9,
+                "originalText": "价格可以接受",
+                "translationZh": null
+              },
+              {
+                "quoteId": "q:demo-source-3:30:126:auto:fragment:0:3:17",
+                "vocId": "demo-source-3:30:126:auto",
+                "sourceId": "demo-source-3",
+                "start": 33,
+                "end": 50,
+                "originalText": "The price is fair",
+                "translationZh": "价格是公道的"
+              }
+            ],
+            "strength": {
+              "level": "Low",
+              "ruleVersion": "evidence-v1",
+              "mentionFrequency": {
+                "supportingVocCount": 2,
+                "contradictingVocCount": 0,
+                "scopeVocCount": 6,
+                "supportRate": 0.3333333333333333
+              },
+              "crossPlatformConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "timeConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "sentimentConsistency": {
+                "status": "insufficient_data",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+              },
+              "reasonZh": "在 6 条范围内记录中有 2 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+            }
+          },
+          "limitationsZh": [
+            "仅音途来源"
+          ]
+        },
+        {
+          "id": "comp:tunetrail:battery",
+          "titleZh": "音途续航不错",
+          "summaryZh": "音途用户认为电池续航不错。",
+          "scopeGroupIds": [
+            "brand:competitor:音途 tunetrail"
+          ],
+          "evidence": {
+            "supportingVocIds": [
+              "demo-source-3:162:261:auto"
+            ],
+            "contradictingVocIds": [],
+            "sourceIds": [
+              "demo-source-3"
+            ],
+            "representativeQuotes": [
+              {
+                "quoteId": "q:demo-source-3:162:261:auto:fragment:0:3:21",
+                "vocId": "demo-source-3:162:261:auto",
+                "sourceId": "demo-source-3",
+                "start": 165,
+                "end": 186,
+                "originalText": "Battery life is good.",
+                "translationZh": "电池续航不错。"
+              }
+            ],
+            "strength": {
+              "level": "Low",
+              "ruleVersion": "evidence-v1",
+              "mentionFrequency": {
+                "supportingVocCount": 1,
+                "contradictingVocCount": 0,
+                "scopeVocCount": 6,
+                "supportRate": 0.16666666666666666
+              },
+              "crossPlatformConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "timeConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "sentimentConsistency": {
+                "status": "insufficient_data",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+              },
+              "reasonZh": "在 6 条范围内记录中有 1 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+            }
+          },
+          "limitationsZh": [
+            "仅一条证据"
+          ]
+        },
+        {
+          "id": "comp:tunetrail:connect",
+          "titleZh": "音途通话与连接够用",
+          "summaryZh": "音途用户认为通话和连接都够用。",
+          "scopeGroupIds": [
+            "brand:competitor:音途 tunetrail"
+          ],
+          "evidence": {
+            "supportingVocIds": [
+              "demo-source-3:261:292:auto"
+            ],
+            "contradictingVocIds": [],
+            "sourceIds": [
+              "demo-source-3"
+            ],
+            "representativeQuotes": [
+              {
+                "quoteId": "q:demo-source-3:261:292:auto:fragment:0:3:8",
+                "vocId": "demo-source-3:261:292:auto",
+                "sourceId": "demo-source-3",
+                "start": 264,
+                "end": 272,
+                "originalText": "通话和连接都够用",
+                "translationZh": null
+              }
+            ],
+            "strength": {
+              "level": "Low",
+              "ruleVersion": "evidence-v1",
+              "mentionFrequency": {
+                "supportingVocCount": 1,
+                "contradictingVocCount": 0,
+                "scopeVocCount": 6,
+                "supportRate": 0.16666666666666666
+              },
+              "crossPlatformConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "timeConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "sentimentConsistency": {
+                "status": "insufficient_data",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+              },
+              "reasonZh": "在 6 条范围内记录中有 1 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+            }
+          },
+          "limitationsZh": [
+            "仅一条证据"
+          ]
+        }
+      ],
+      "commonPainPoints": [
+        {
+          "id": "common:pageinfo",
+          "titleZh": "页面难判断佩戴感",
+          "summaryZh": "自有与竞品用户均反映页面信息不足以判断佩戴舒适度。",
+          "scopeGroupIds": [],
+          "evidence": {
+            "supportingVocIds": [
+              "demo-source-3:30:126:auto",
+              "demo-source-1:138:175:auto",
+              "demo-source-2:128:169:auto",
+              "demo-source-3:126:162:auto"
+            ],
+            "contradictingVocIds": [],
+            "sourceIds": [
+              "demo-source-3",
+              "demo-source-1",
+              "demo-source-2"
+            ],
+            "representativeQuotes": [
+              {
+                "quoteId": "q:demo-source-3:30:126:auto:fragment:0:26:68",
+                "vocId": "demo-source-3:30:126:auto",
+                "sourceId": "demo-source-3",
+                "start": 56,
+                "end": 124,
+                "originalText": "I cannot tell from the product page whether it will fit comfortably.",
+                "translationZh": "我无法从产品页判断它是否佩戴舒适。"
+              },
+              {
+                "quoteId": "q:demo-source-1:138:175:auto:fragment:0:17:18",
+                "vocId": "demo-source-1:138:175:auto",
+                "sourceId": "demo-source-1",
+                "start": 155,
+                "end": 173,
+                "originalText": "页面应该展示耳罩材质和真实佩戴体验。",
+                "translationZh": null
+              },
+              {
+                "quoteId": "q:demo-source-2:128:169:auto:fragment:0:19:20",
+                "vocId": "demo-source-2:128:169:auto",
+                "sourceId": "demo-source-2",
+                "start": 147,
+                "end": 167,
+                "originalText": "商品页只有参数，看不出长时间佩戴的感觉。",
+                "translationZh": null
+              },
+              {
+                "quoteId": "q:demo-source-3:126:162:auto:fragment:0:3:31",
+                "vocId": "demo-source-3:126:162:auto",
+                "sourceId": "demo-source-3",
+                "start": 129,
+                "end": 160,
+                "originalText": "如果能看到长时间佩戴演示和明确的试戴退换说明，我会更愿意考虑。",
+                "translationZh": null
+              }
+            ],
+            "strength": {
+              "level": "Medium",
+              "ruleVersion": "evidence-v1",
+              "mentionFrequency": {
+                "supportingVocCount": 4,
+                "contradictingVocCount": 0,
+                "scopeVocCount": 18,
+                "supportRate": 0.2222222222222222
+              },
+              "crossPlatformConsistency": {
+                "status": "insufficient_data",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+              },
+              "timeConsistency": {
+                "status": "not_applicable",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "本结论范围不足两个有效组。"
+              },
+              "sentimentConsistency": {
+                "status": "insufficient_data",
+                "score": null,
+                "eligibleGroupCount": 0,
+                "supportingGroupCount": 0,
+                "reasonZh": "明确情感不足 5 条或覆盖低于 70%。"
+              },
+              "reasonZh": "在 18 条范围内记录中有 4 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+            }
+          },
+          "limitationsZh": [
+            "无相反证据"
+          ]
+        }
+      ],
+      "opportunityGaps": []
+    }
+  },
+  "insightCards": [
+    {
+      "id": "insight:comfort",
+      "titleZh": "舒适度是核心决策点",
+      "userNeedFindingId": "need:lightsoft",
+      "painPointFindingId": "pain:clamp",
+      "purchaseDriverFindingIds": [
+        "driver:comfortfirst"
+      ],
+      "purchaseBarrierFindingIds": [
+        "barrier:fitunknown"
+      ],
+      "evidence": {
+        "supportingVocIds": [
+          "demo-source-1:0:46:auto",
+          "demo-source-2:0:35:auto",
+          "demo-source-3:0:30:auto",
+          "demo-source-1:46:138:auto",
+          "demo-source-2:35:128:auto",
+          "demo-source-3:30:126:auto",
+          "demo-source-1:138:175:auto",
+          "demo-source-2:128:169:auto",
+          "demo-source-3:126:162:auto",
+          "demo-source-1:175:288:auto",
+          "demo-source-2:169:260:auto",
+          "demo-source-3:162:261:auto",
+          "demo-source-3:261:292:auto",
+          "demo-source-1:321:413:auto",
+          "demo-source-3:292:406:auto"
+        ],
+        "contradictingVocIds": [
+          "demo-source-2:293:386:auto"
+        ],
+        "sourceIds": [
+          "demo-source-1",
+          "demo-source-2",
+          "demo-source-3"
+        ],
+        "representativeQuotes": [
+          {
+            "quoteId": "q:demo-source-1:0:46:auto:fragment:0:3:22",
+            "vocId": "demo-source-1:0:46:auto",
+            "sourceId": "demo-source-1",
+            "start": 3,
+            "end": 25,
+            "originalText": "戴着听了两小时没有明显压耳，比我上一副舒服。",
+            "translationZh": null
+          },
+          {
+            "quoteId": "q:demo-source-2:0:35:auto:fragment:0:10:11",
+            "vocId": "demo-source-2:0:35:auto",
+            "sourceId": "demo-source-2",
+            "start": 10,
+            "end": 21,
+            "originalText": "但戴一小时就开始夹头。",
+            "translationZh": null
+          },
+          {
+            "quoteId": "q:demo-source-2:0:35:auto:fragment:0:21:12",
+            "vocId": "demo-source-2:0:35:auto",
+            "sourceId": "demo-source-2",
+            "start": 21,
+            "end": 33,
+            "originalText": "希望有更轻、更软的耳罩。",
+            "translationZh": null
+          },
+          {
+            "quoteId": "q:demo-source-3:0:30:auto:fragment:0:11:17",
+            "vocId": "demo-source-3:0:30:auto",
+            "sourceId": "demo-source-3",
+            "start": 11,
+            "end": 28,
+            "originalText": "耳罩有点硬，戴久了需要摘下来休息。",
+            "translationZh": null
+          },
+          {
+            "quoteId": "q:demo-source-2:293:386:auto:fragment:0:34:59",
+            "vocId": "demo-source-2:293:386:auto",
+            "sourceId": "demo-source-2",
+            "start": 327,
+            "end": 386,
+            "originalText": "las almohadillas me resultan incómodas después de una hora.",
+            "translationZh": "一小时后耳垫让我觉得不舒服。"
+          }
+        ],
+        "strength": {
+          "level": "Medium",
+          "ruleVersion": "evidence-v1",
+          "mentionFrequency": {
+            "supportingVocCount": 15,
+            "contradictingVocCount": 1,
+            "scopeVocCount": 18,
+            "supportRate": 0.8333333333333334
+          },
+          "crossPlatformConsistency": {
+            "status": "insufficient_data",
+            "score": null,
+            "eligibleGroupCount": 0,
+            "supportingGroupCount": 0,
+            "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+          },
+          "timeConsistency": {
+            "status": "not_applicable",
+            "score": null,
+            "eligibleGroupCount": 0,
+            "supportingGroupCount": 0,
+            "reasonZh": "本结论范围不足两个有效组。"
+          },
+          "sentimentConsistency": {
+            "status": "not_applicable",
+            "score": null,
+            "eligibleGroupCount": 0,
+            "supportingGroupCount": 0,
+            "reasonZh": "此结论不要求同方向情感。"
+          },
+          "reasonZh": "在 18 条范围内记录中有 15 条支持、1 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+        }
+      },
+      "marketingImplicationZh": "建议作为待验证行动：待测试：以长时间佩戴轻软不夹头为主诉求，配合真实佩戴演示。",
+      "marketingPriority": {
+        "level": "High",
+        "reasonZh": "多来源反复出现舒适度关注与不适反馈"
+      },
+      "limitationsZh": [
+        "样本小，未验证转化效果"
+      ],
+      "targetSegment": {
+        "type": "need_based",
+        "needFindingId": "need:lightsoft",
+        "labelZh": "关注「更轻更软的佩戴」的人群"
+      }
+    },
+    {
+      "id": "insight:proof",
+      "titleZh": "用证据降低佩戴不确定性",
+      "userNeedFindingId": "need:proof",
+      "painPointFindingId": "pain:pageinfo",
+      "purchaseDriverFindingIds": [
+        "driver:comfortfirst"
+      ],
+      "purchaseBarrierFindingIds": [
+        "barrier:fitunknown"
+      ],
+      "evidence": {
+        "supportingVocIds": [
+          "demo-source-3:30:126:auto",
+          "demo-source-1:138:175:auto",
+          "demo-source-2:128:169:auto",
+          "demo-source-3:126:162:auto"
+        ],
+        "contradictingVocIds": [],
+        "sourceIds": [
+          "demo-source-3",
+          "demo-source-1",
+          "demo-source-2"
+        ],
+        "representativeQuotes": [
+          {
+            "quoteId": "q:demo-source-3:30:126:auto:fragment:0:26:68",
+            "vocId": "demo-source-3:30:126:auto",
+            "sourceId": "demo-source-3",
+            "start": 56,
+            "end": 124,
+            "originalText": "I cannot tell from the product page whether it will fit comfortably.",
+            "translationZh": "我无法从产品页判断它是否佩戴舒适。"
+          },
+          {
+            "quoteId": "q:demo-source-1:138:175:auto:fragment:0:17:18",
+            "vocId": "demo-source-1:138:175:auto",
+            "sourceId": "demo-source-1",
+            "start": 155,
+            "end": 173,
+            "originalText": "页面应该展示耳罩材质和真实佩戴体验。",
+            "translationZh": null
+          },
+          {
+            "quoteId": "q:demo-source-2:128:169:auto:fragment:0:19:20",
+            "vocId": "demo-source-2:128:169:auto",
+            "sourceId": "demo-source-2",
+            "start": 147,
+            "end": 167,
+            "originalText": "商品页只有参数，看不出长时间佩戴的感觉。",
+            "translationZh": null
+          },
+          {
+            "quoteId": "q:demo-source-3:126:162:auto:fragment:0:3:31",
+            "vocId": "demo-source-3:126:162:auto",
+            "sourceId": "demo-source-3",
+            "start": 129,
+            "end": 160,
+            "originalText": "如果能看到长时间佩戴演示和明确的试戴退换说明，我会更愿意考虑。",
+            "translationZh": null
+          }
+        ],
+        "strength": {
+          "level": "Medium",
+          "ruleVersion": "evidence-v1",
+          "mentionFrequency": {
+            "supportingVocCount": 4,
+            "contradictingVocCount": 0,
+            "scopeVocCount": 18,
+            "supportRate": 0.2222222222222222
+          },
+          "crossPlatformConsistency": {
+            "status": "insufficient_data",
+            "score": null,
+            "eligibleGroupCount": 0,
+            "supportingGroupCount": 0,
+            "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+          },
+          "timeConsistency": {
+            "status": "not_applicable",
+            "score": null,
+            "eligibleGroupCount": 0,
+            "supportingGroupCount": 0,
+            "reasonZh": "本结论范围不足两个有效组。"
+          },
+          "sentimentConsistency": {
+            "status": "not_applicable",
+            "score": null,
+            "eligibleGroupCount": 0,
+            "supportingGroupCount": 0,
+            "reasonZh": "此结论不要求同方向情感。"
+          },
+          "reasonZh": "在 18 条范围内记录中有 4 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+        }
+      },
+      "marketingImplicationZh": "建议作为待验证行动：待测试：页面补充耳罩材质、长时间佩戴演示与试戴退换说明。",
+      "marketingPriority": {
+        "level": "Medium",
+        "reasonZh": "信息不足被明确表述为购买顾虑"
+      },
+      "limitationsZh": [
+        "未验证信息形式对决策的影响"
+      ],
+      "targetSegment": {
+        "type": "need_based",
+        "needFindingId": "need:proof",
+        "labelZh": "关注「佩戴演示与退换说明」的人群"
+      }
+    },
+    {
+      "id": "insight:returnclarity",
+      "titleZh": "退货信息清晰化降低犹豫",
+      "userNeedFindingId": "need:proof",
+      "painPointFindingId": "pain:returninfo",
+      "purchaseDriverFindingIds": [],
+      "purchaseBarrierFindingIds": [
+        "barrier:returnunclear"
+      ],
+      "evidence": {
+        "supportingVocIds": [
+          "demo-source-3:126:162:auto",
+          "demo-source-2:260:293:auto",
+          "demo-source-1:321:413:auto",
+          "demo-source-3:292:406:auto"
+        ],
+        "contradictingVocIds": [],
+        "sourceIds": [
+          "demo-source-3",
+          "demo-source-2",
+          "demo-source-1"
+        ],
+        "representativeQuotes": [
+          {
+            "quoteId": "q:demo-source-3:126:162:auto:fragment:0:3:31",
+            "vocId": "demo-source-3:126:162:auto",
+            "sourceId": "demo-source-3",
+            "start": 129,
+            "end": 160,
+            "originalText": "如果能看到长时间佩戴演示和明确的试戴退换说明，我会更愿意考虑。",
+            "translationZh": null
+          },
+          {
+            "quoteId": "q:demo-source-2:260:293:auto:fragment:0:10:21",
+            "vocId": "demo-source-2:260:293:auto",
+            "sourceId": "demo-source-2",
+            "start": 270,
+            "end": 291,
+            "originalText": "但是退货流程说明太难找了，下单前有些犹豫。",
+            "translationZh": null
+          },
+          {
+            "quoteId": "q:demo-source-1:321:413:auto:fragment:0:31:61",
+            "vocId": "demo-source-1:321:413:auto",
+            "sourceId": "demo-source-1",
+            "start": 352,
+            "end": 413,
+            "originalText": "me gustaría ver información más clara sobre las devoluciones.",
+            "translationZh": "我希望看到关于退货的更清晰信息。"
+          },
+          {
+            "quoteId": "q:demo-source-3:292:406:auto:fragment:0:61:53",
+            "vocId": "demo-source-3:292:406:auto",
+            "sourceId": "demo-source-3",
+            "start": 353,
+            "end": 406,
+            "originalText": "Les conditions de retour devraient être plus claires.",
+            "translationZh": "退货条件应该更清晰。"
+          }
+        ],
+        "strength": {
+          "level": "Medium",
+          "ruleVersion": "evidence-v1",
+          "mentionFrequency": {
+            "supportingVocCount": 4,
+            "contradictingVocCount": 0,
+            "scopeVocCount": 18,
+            "supportRate": 0.2222222222222222
+          },
+          "crossPlatformConsistency": {
+            "status": "insufficient_data",
+            "score": null,
+            "eligibleGroupCount": 0,
+            "supportingGroupCount": 0,
+            "reasonZh": "来源存在混杂、未知日期或重叠时间，暂不计算一致性。"
+          },
+          "timeConsistency": {
+            "status": "not_applicable",
+            "score": null,
+            "eligibleGroupCount": 0,
+            "supportingGroupCount": 0,
+            "reasonZh": "本结论范围不足两个有效组。"
+          },
+          "sentimentConsistency": {
+            "status": "not_applicable",
+            "score": null,
+            "eligibleGroupCount": 0,
+            "supportingGroupCount": 0,
+            "reasonZh": "此结论不要求同方向情感。"
+          },
+          "reasonZh": "在 18 条范围内记录中有 4 条支持、0 条反例；0 个一致性维度可测。等级表示样本内证据，不是统计置信度。"
+        }
+      },
+      "marketingImplicationZh": "建议作为待验证行动：待测试：在购买路径前置清晰退货条件与流程说明，减少下单犹豫。",
+      "marketingPriority": {
+        "level": "Medium",
+        "reasonZh": "多来源提及退货信息不清并影响下单"
+      },
+      "limitationsZh": [
+        "未验证退货说明对转化的实际作用"
+      ],
+      "targetSegment": {
+        "type": "need_based",
+        "needFindingId": "need:proof",
+        "labelZh": "关注「佩戴演示与退换说明」的人群"
+      }
+    }
+  ],
+  "limitationsZh": [
+    "样本为模拟评论，数量少且集中于单一时间窗，结论待全量证据核验。",
+    "未覆盖地区与人群属性，无法做细分推断。",
+    "平台与时间比较条件不足，未生成相关结论。",
+    "这是当前粘贴样本的用户表达，不是独立用户统计、产品实测或总体市场结论。",
+    "语义归类和译文由模型生成，可能误判；原文匹配不等于语义绝对正确。",
+    "样本少于 50 条，仅供方向性参考。"
+  ]
+}

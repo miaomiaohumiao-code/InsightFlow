@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 1,
+  "id": "demo-comfort-2026",
+  "name": "舒适佩戴的传播机会｜人工演示数据",
+  "researchGoal": "寻找新传播卖点",
+  "customGoal": "",
+  "ownBrandName": "轻声 QuietNest",
+  "sources": [
+    {
+      "id": "demo-source-1",
+      "platform": "电商评论（模拟）",
+      "brandType": "own",
+      "competitorName": "",
+      "timeRange": {
+        "unknown": false,
+        "start": "2026-08-01",
+        "end": "2026-08-31"
+      },
+      "region": "",
+      "product": "头戴式耳机 / 舒适佩戴",
+      "rawText": "1. 戴着听了两小时没有明显压耳，比我上一副舒服。降噪能减弱风扇声，但人说话还是听得到。\n\n2. The ear cushions are comfortable, but I wish the battery lasted longer between charges.\n\n3. 我更关心长时间佩戴会不会闷，页面应该展示耳罩材质和真实佩戴体验。\n\n4. Comfort matters more to me than a long list of sound modes. These feel light during long listening sessions.\n\n5. 耳机连接很快，操作也简单。不过地铁里的降噪没有想象中强。\n\n6. La comodidad es buena, pero me gustaría ver información más clara sobre las devoluciones."
+    },
+    {
+      "id": "demo-source-2",
+      "platform": "电商评论（模拟）",
+      "brandType": "competitor",
+      "competitorName": "声界 AudioPeak",
+      "timeRange": {
+        "unknown": false,
+        "start": "2026-08-01",
+        "end": "2026-08-31"
+      },
+      "region": "",
+      "product": "头戴式耳机 / 舒适佩戴",
+      "rawText": "1. 降噪确实不错，但戴一小时就开始夹头。希望有更轻、更软的耳罩。\n\n2. Great noise cancellation, but the pressure on my ears makes long sessions uncomfortable.\n\n3. 功能很多，可我最在意的是舒适度。商品页只有参数，看不出长时间佩戴的感觉。\n\n4. I would trade some extra features for a lighter headset that does not squeeze my head.\n\n5. 续航让我满意，但是退货流程说明太难找了，下单前有些犹豫。\n\n6. La batería dura bastante, pero las almohadillas me resultan incómodas después de una hora."
+    },
+    {
+      "id": "demo-source-3",
+      "platform": "社区讨论（模拟）",
+      "brandType": "competitor",
+      "competitorName": "音途 TuneTrail",
+      "timeRange": {
+        "unknown": false,
+        "start": "2026-08-01",
+        "end": "2026-08-31"
+      },
+      "region": "",
+      "product": "头戴式耳机 / 舒适佩戴",
+      "rawText": "1. 价格可以接受，但耳罩有点硬，戴久了需要摘下来休息。\n\n2. The price is fair, but I cannot tell from the product page whether it will fit comfortably.\n\n3. 如果能看到长时间佩戴演示和明确的试戴退换说明，我会更愿意考虑。\n\n4. Battery life is good. My main concern before buying is comfort rather than more audio presets.\n\n5. 通话和连接都够用，我需要的是轻一点、长时间戴着不累。\n\n6. Je préfère un casque confortable à davantage de réglages. Les conditions de retour devraient être plus claires."
+    }
+  ],
+  "createdAt": "2026-09-25T03:37:50.212Z",
+  "updatedAt": "2026-09-25T03:37:50.212Z",
+  "revision": 0,
+  "preview": {
+    "parserVersion": 1,
+    "generatedAt": "2026-09-25T03:37:50.219Z",
+    "confirmedAt": "2026-09-25T03:37:50.219Z",
+    "modes": {
+      "demo-source-1": "auto",
+      "demo-source-2": "auto",
+      "demo-source-3": "auto"
+    },
+    "records": [
+      {
+        "id": "demo-source-1:0:46:auto",
+        "sourceId": "demo-source-1",
+        "start": 0,
+        "end": 46,
+        "original": "1. 戴着听了两小时没有明显压耳，比我上一副舒服。降噪能减弱风扇声，但人说话还是听得到。\n\n",
+        "text": "戴着听了两小时没有明显压耳，比我上一副舒服。降噪能减弱风扇声，但人说话还是听得到。",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-1:46:138:auto",
+        "sourceId": "demo-source-1",
+        "start": 46,
+        "end": 138,
+        "original": "2. The ear cushions are comfortable, but I wish the battery lasted longer between charges.\n\n",
+        "text": "The ear cushions are comfortable, but I wish the battery lasted longer between charges.",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-1:138:175:auto",
+        "sourceId": "demo-source-1",
+        "start": 138,
+        "end": 175,
+        "original": "3. 我更关心长时间佩戴会不会闷，页面应该展示耳罩材质和真实佩戴体验。\n\n",
+        "text": "我更关心长时间佩戴会不会闷，页面应该展示耳罩材质和真实佩戴体验。",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-1:175:288:auto",
+        "sourceId": "demo-source-1",
+        "start": 175,
+        "end": 288,
+        "original": "4. Comfort matters more to me than a long list of sound modes. These feel light during long listening sessions.\n\n",
+        "text": "Comfort matters more to me than a long list of sound modes. These feel light during long listening sessions.",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-1:288:321:auto",
+        "sourceId": "demo-source-1",
+        "start": 288,
+        "end": 321,
+        "original": "5. 耳机连接很快，操作也简单。不过地铁里的降噪没有想象中强。\n\n",
+        "text": "耳机连接很快，操作也简单。不过地铁里的降噪没有想象中强。",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-1:321:413:auto",
+        "sourceId": "demo-source-1",
+        "start": 321,
+        "end": 413,
+        "original": "6. La comodidad es buena, pero me gustaría ver información más clara sobre las devoluciones.",
+        "text": "La comodidad es buena, pero me gustaría ver información más clara sobre las devoluciones.",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-2:0:35:auto",
+        "sourceId": "demo-source-2",
+        "start": 0,
+        "end": 35,
+        "original": "1. 降噪确实不错，但戴一小时就开始夹头。希望有更轻、更软的耳罩。\n\n",
+        "text": "降噪确实不错，但戴一小时就开始夹头。希望有更轻、更软的耳罩。",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-2:35:128:auto",
+        "sourceId": "demo-source-2",
+        "start": 35,
+        "end": 128,
+        "original": "2. Great noise cancellation, but the pressure on my ears makes long sessions uncomfortable.\n\n",
+        "text": "Great noise cancellation, but the pressure on my ears makes long sessions uncomfortable.",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-2:128:169:auto",
+        "sourceId": "demo-source-2",
+        "start": 128,
+        "end": 169,
+        "original": "3. 功能很多，可我最在意的是舒适度。商品页只有参数，看不出长时间佩戴的感觉。\n\n",
+        "text": "功能很多，可我最在意的是舒适度。商品页只有参数，看不出长时间佩戴的感觉。",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-2:169:260:auto",
+        "sourceId": "demo-source-2",
+        "start": 169,
+        "end": 260,
+        "original": "4. I would trade some extra features for a lighter headset that does not squeeze my head.\n\n",
+        "text": "I would trade some extra features for a lighter headset that does not squeeze my head.",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-2:260:293:auto",
+        "sourceId": "demo-source-2",
+        "start": 260,
+        "end": 293,
+        "original": "5. 续航让我满意，但是退货流程说明太难找了，下单前有些犹豫。\n\n",
+        "text": "续航让我满意，但是退货流程说明太难找了，下单前有些犹豫。",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-2:293:386:auto",
+        "sourceId": "demo-source-2",
+        "start": 293,
+        "end": 386,
+        "original": "6. La batería dura bastante, pero las almohadillas me resultan incómodas después de una hora.",
+        "text": "La batería dura bastante, pero las almohadillas me resultan incómodas después de una hora.",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-3:0:30:auto",
+        "sourceId": "demo-source-3",
+        "start": 0,
+        "end": 30,
+        "original": "1. 价格可以接受，但耳罩有点硬，戴久了需要摘下来休息。\n\n",
+        "text": "价格可以接受，但耳罩有点硬，戴久了需要摘下来休息。",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-3:30:126:auto",
+        "sourceId": "demo-source-3",
+        "start": 30,
+        "end": 126,
+        "original": "2. The price is fair, but I cannot tell from the product page whether it will fit comfortably.\n\n",
+        "text": "The price is fair, but I cannot tell from the product page whether it will fit comfortably.",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-3:126:162:auto",
+        "sourceId": "demo-source-3",
+        "start": 126,
+        "end": 162,
+        "original": "3. 如果能看到长时间佩戴演示和明确的试戴退换说明，我会更愿意考虑。\n\n",
+        "text": "如果能看到长时间佩戴演示和明确的试戴退换说明，我会更愿意考虑。",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-3:162:261:auto",
+        "sourceId": "demo-source-3",
+        "start": 162,
+        "end": 261,
+        "original": "4. Battery life is good. My main concern before buying is comfort rather than more audio presets.\n\n",
+        "text": "Battery life is good. My main concern before buying is comfort rather than more audio presets.",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-3:261:292:auto",
+        "sourceId": "demo-source-3",
+        "start": 261,
+        "end": 292,
+        "original": "5. 通话和连接都够用，我需要的是轻一点、长时间戴着不累。\n\n",
+        "text": "通话和连接都够用，我需要的是轻一点、长时间戴着不累。",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      },
+      {
+        "id": "demo-source-3:292:406:auto",
+        "sourceId": "demo-source-3",
+        "start": 292,
+        "end": 406,
+        "original": "6. Je préfère un casque confortable à davantage de réglages. Les conditions de retour devraient être plus claires.",
+        "text": "Je préfère un casque confortable à davantage de réglages. Les conditions de retour devraient être plus claires.",
+        "method": "numbered",
+        "flags": [],
+        "changes": [
+          "已移除评论编号"
+        ],
+        "links": [],
+        "included": true,
+        "reviewed": false
+      }
+    ]
+  }
+}
