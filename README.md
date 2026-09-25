@@ -6,6 +6,9 @@ Online Demo：[InsightFlow](https://insightflow-sable-five.vercel.app)（公开�
 
 InsightFlow 是面向营销人员、产品经理与品牌研究者的 Web 工作台。它帮助用户从多语言评论中识别需求、痛点与购买动机，将可追溯的洞察转成中文营销策略和实验建议。
 
+> 快速体验：打开在线 Demo，按 [演示数据说明](docs/demo/README.md) 粘贴三组评论。全部演示品牌与评论均为人工构造；AI 结果不是市场研究结论。
+> 访问说明：Vercel 链接在部分中国大陆网络中可能无法直连。可先浏览下方截图和案例。
+
 ## 为什么做这个项目
 
 评论分散在不同平台、品牌和时间段，人工整理耗时，也容易把个别声音误当成普遍需求。InsightFlow 将原始评论、证据和营销建议连起来，让团队能检查“为什么值得做”，而不仅得到一段缺少依据的总结。
@@ -101,7 +104,27 @@ tests/                  离线回归测试
 
 ## Demo 截图
 
-截图位置：[docs/screenshots](docs/screenshots/README.md)。尚未放入公开截图；建议提供输入、预览、Insights、营销策略和实验建议五张经过脱敏的图片。根目录“结果”中的私人截图不会自动公开。
+以下截图来自同一人工演示项目的真实页面。完整过程见 [案例说明](docs/demo/case-study.md)，可复制的输入见 [演示数据](docs/demo/README.md)。
+
+### 1. 项目工作空间
+![首页：创建项目与最近项目](docs/screenshots/home.png)
+
+### 2. 多来源 VOC 输入
+![VOC 输入：自有品牌与两个竞品](docs/screenshots/voc-input.png)
+
+### 3. 清洗与预览
+![预览：数量、来源和拆分结果](docs/screenshots/preview.png)
+
+### 4. 有证据的洞察
+![整体分析：主题与样本概况](docs/screenshots/overall-analysis.png)
+
+![洞察：分析结果、原文引用与证据强度](docs/screenshots/insights.png)
+
+### 5. 营销策略工作台
+![营销策略：用户洞察与营销机会](docs/screenshots/marketing-action.png)
+
+### 6. A/B 实验建议
+![实验建议：假设、单一变量和指标](docs/screenshots/ab-recommendation.png)
 
 ## GitHub 与 Vercel
 

@@ -1,5 +1,15 @@
-# Demo 截图位置
+# Demo 截图
 
-待添加经过脱敏的 home.png、voc-input.png、preview.png、insights.png、marketing-action.png、ab-recommendation.png。
+这六张截图来自 Vercel 上的实际应用，使用同一套人工构造的演示品牌与评论，不包含私人研究材料。
 
-只使用获准公开或人工构造的数据，不包含 API Key、个人评论身份、账单或本地文件路径。当前未从个人“结果”文件夹复制任何截图。
+| 文件 | 展示内容 |
+| --- | --- |
+| home.png | 首页和最近项目 |
+| voc-input.png | 项目目标、自有品牌、竞品与评论输入 |
+| preview.png | 评论数量、来源和拆分预览 |
+| insights.png | 分析主题、营销洞察与证据 |
+| marketing-action.png | 从选中洞察生成的策略 |
+| ab-recommendation.png | 实验假设、单一变量和推荐指标 |
+
+输入见 [演示数据](../demo/README.md)，结果与限制见 [案例说明](../demo/case-study.md)。
+截图仅展示产品流程，不代表真实消费者研究或真实实验成效。
